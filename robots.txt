@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://ominkwon.github.io/sitemap.xml
+Sitemap: https://omin-kwon.github.io/sitemap.xml
