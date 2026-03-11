@@ -65,18 +65,12 @@
     {
       "name": "Computer Architecture",
       "icon": "fa-solid fa-microchip",
-      "keywords": [
-        "Hardware-Software Co-design",
-        "Processing-in-Memory"
-      ]
+      "keywords": ["Hardware-Software Co-design", "Processing-in-Memory"]
     },
     {
       "name": "Machine Learning Systems",
       "icon": "fa-solid fa-brain",
-      "keywords": [
-        "LLM Inference Optimization",
-        "Efficient Deep Learning"
-      ]
+      "keywords": ["LLM Inference Optimization", "Efficient Deep Learning"]
     }
   ],
   "languages": [
