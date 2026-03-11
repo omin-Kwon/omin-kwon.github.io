@@ -25,6 +25,14 @@ cv:
         end_date: 2025-08
 
     Experience:
+      - company: University of Illinois Urbana-Champaign (UIUC)
+        position: Visiting Researcher
+        location: Urbana, IL, USA
+        start_date: 2026-03
+        end_date: present
+        highlights:
+          - "FAST Lab, hosted by Prof. Nam Sung Kim"
+
       - company: Republic of Korea Air Force
         position: Military Service
         location: South Korea
