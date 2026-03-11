@@ -391,7 +391,10 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-our-paper-aide-has-been-accepted-to-ieee-computer-architecture-letters-cal",
+            },},{id: "news-won-the-grand-prize-deputy-prime-minister-amp-amp-minister-of-education-award-at-the-stob-league-a-national-semiconductor-competition-hosted-by-the-korean-government-news",
+          title: 'Won the Grand Prize (Deputy Prime Minister &amp;amp;amp; Minister of Education Award) at...',
+          description: "",
+          section: "News",},{id: "news-our-paper-aide-has-been-accepted-to-ieee-computer-architecture-letters-cal",
           title: 'Our paper AiDE has been accepted to IEEE Computer Architecture Letters (CAL)!',
           description: "",
           section: "News",},{id: "news-our-paper-star-has-been-accepted-to-iccad-2025-special-thanks-to-prof-jihong-kim-and-prof-myungsuk-kim-for-giving-an-undergraduate-student-this-opportunity-a-patent-for-this-ssd-technology-is-being-prepared-in-collaboration-with-sk-hynix",
