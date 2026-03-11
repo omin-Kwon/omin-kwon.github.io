@@ -1,9 +1,7 @@
 cv:
   name: Omin Kwon
-  label: M.S. Candidate
+  email: om0127@snu.ac.kr
   location: Seoul, South Korea
-  image: ""
-  summary: M.S. candidate in ECE at Seoul National University, researching computer architecture and systems for efficient machine learning.
 
   sections:
     Education:
