@@ -394,7 +394,7 @@ ninja.data = [{
             },},{id: "news-our-paper-aide-has-been-accepted-to-ieee-computer-architecture-letters-cal",
           title: 'Our paper AiDE has been accepted to IEEE Computer Architecture Letters (CAL)!',
           description: "",
-          section: "News",},{id: "news-our-paper-star-has-been-accepted-to-iccad-2025-special-thanks-to-prof-jihong-kim-a-patent-for-this-ssd-technology-is-being-prepared-in-collaboration-with-sk-hynix",
+          section: "News",},{id: "news-our-paper-star-has-been-accepted-to-iccad-2025-special-thanks-to-prof-jihong-kim-and-prof-myungsuk-kim-for-giving-an-undergraduate-student-this-opportunity-a-patent-for-this-ssd-technology-is-being-prepared-in-collaboration-with-sk-hynix",
           title: 'Our paper STAR has been accepted to ICCAD 2025! Special thanks to Prof....',
           description: "",
           section: "News",},{id: "news-graduated-from-snu-ece-b-s-and-started-m-s-at-arc-lab-snu-cse-advised-by-prof-jae-w-lee",
