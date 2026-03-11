@@ -391,16 +391,17 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-our-paper-aide-has-been-accepted-to-ieee-computer-architecture-letters-cal",
+          title: 'Our paper AiDE has been accepted to IEEE Computer Architecture Letters (CAL)!',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-our-paper-star-has-been-accepted-to-iccad-2025",
+          title: 'Our paper STAR has been accepted to ICCAD 2025!',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-our-paper-nestedfp-has-been-accepted-to-neurips-2025",
+          title: 'Our paper NestedFP has been accepted to NeurIPS 2025!',
+          description: "",
+          section: "News",},{id: "news-visiting-fast-lab-at-uiuc-hosted-by-prof-nam-sung-kim",
+          title: 'Visiting FAST Lab at UIUC, hosted by Prof. Nam Sung Kim.',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
