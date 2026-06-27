@@ -33,9 +33,23 @@
               <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.title }}</h6>
             {% endif %}
 
+            {% if entry.authors %}
+              <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
+                {{ entry.authors | join: ', ' | markdownify | remove: '<p>' | remove: '</p>' }}
+              </h6>
+            {% endif %}
+
             {% if entry.publisher %}
               <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
                 <em>{{ entry.publisher }}</em>
+              </h6>
+            {% endif %}
+
+            {% if entry.url %}
+              {% assign paper_url = entry.url | replace: 'https://', '' | replace: 'http://', '' %}
+              <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
+                Paper Link:
+                <a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">{{ paper_url }}</a>
               </h6>
             {% endif %}
 
@@ -53,9 +67,23 @@
               <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.title }}</h6>
             {% endif %}
 
+            {% if entry.authors %}
+              <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
+                {{ entry.authors | join: ', ' | markdownify | remove: '<p>' | remove: '</p>' }}
+              </h6>
+            {% endif %}
+
             {% if entry.publisher %}
               <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
                 <em>{{ entry.publisher }}</em>
+              </h6>
+            {% endif %}
+
+            {% if entry.url %}
+              {% assign paper_url = entry.url | replace: 'https://', '' | replace: 'http://', '' %}
+              <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
+                Paper Link:
+                <a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">{{ paper_url }}</a>
               </h6>
             {% endif %}
 

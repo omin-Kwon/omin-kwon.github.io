@@ -1,37 +1,151 @@
 cv:
   name: Omin Kwon
   email: om0127@snu.ac.kr
+  website: https://omin-kwon.github.io
+  social_networks:
+    - network: LinkedIn
+      username: ominkwon
   location: Seoul, South Korea
 
   sections:
+    Research Interest:
+      - "Computer Architectures & Machine Learning Systems, with an emphasis on co-designing ML algorithms and computer systems for efficient ML."
+
     Education:
       - institution: Seoul National University
         location: Seoul, South Korea
         url: https://snu.ac.kr/
         area: Computer Science and Engineering
         studyType: M.S.
+        degree: M.S.
         start_date: 2025-09
         end_date: present
         highlights:
-          - "Advisor: Prof. Jae W. Lee"
-          - "ARC (Architecture and Code Optimization) Lab"
+          - "Advisor: Prof. Jae W. Lee, ARC Lab"
+          - "GPA: 4.3/4.3"
 
       - institution: Seoul National University
         location: Seoul, South Korea
         url: https://snu.ac.kr/
         area: "Electrical and Computer Engineering (summa cum laude)"
         studyType: B.S.
+        degree: B.S.
         start_date: 2019-03
         end_date: 2025-08
+        highlights:
+          - "GPA: 4.26/4.3 (upper-division), 3.95/4.3 (overall)"
+          - "Leave of absence for mandatory military service (May 2021-Feb 2023)"
 
-    Experience:
+    Publications:
+      - title: "HERALD: High Throughput Block Diffusion LLM Serving via CPU-GPU Cooperative KV Cache Retrieval"
+        authors:
+          - "**Omin Kwon**"
+          - Doyeon Kim
+          - Jongseok Park
+          - Seung Yul Lee
+          - Ion Stoica
+          - Jae W. Lee
+        publisher: "Under review"
+        journal: |
+          Under review
+          Paper Link: [arxiv.org/abs/2606.21633](https://arxiv.org/abs/2606.21633)
+        url: https://arxiv.org/abs/2606.21633
+        releaseDate: "2026"
+
+      - title: "ELIXIR: Disaggregating FFN, Attention, and KV Cache via CXL-PNM for Elastic LLM Serving"
+        authors:
+          - '**Omin Kwon**\*'
+          - 'Kyungsoo Kim\*'
+          - Ugyeong Song
+          - Yeonhong Park
+          - Nachuan Wang
+          - Namsung Kim
+          - Jae W. Lee
+        publisher: "Under review"
+        journal: "Under review"
+        releaseDate: "2026"
+
+      - title: "MAGE: All-[MASK] Block Already Knows Where to Look in Diffusion LLM"
+        authors:
+          - "**Omin Kwon**"
+          - Yeonjae Kim
+          - Doyeon Kim
+          - Minseo Kim
+          - Yeonhong Park
+          - Jae W. Lee
+        publisher: "ICML 2026 AdaptFM Workshop (Oral); extended version under review"
+        journal: |
+          ICML 2026 AdaptFM Workshop (Oral); extended version under review
+          Paper Link: [arxiv.org/abs/2602.14209](https://arxiv.org/abs/2602.14209)
+        url: https://arxiv.org/abs/2602.14209
+        releaseDate: "2026"
+
+      - title: "STAR: Improving Lifetime and Performance of High-Capacity Modern SSDs Using State-Aware Randomizer"
+        authors:
+          - '**Omin Kwon**\*'
+          - 'Kyungjun Oh\*'
+          - Jaeyong Lee
+          - Myungsuk Kim
+          - Jihong Kim
+        publisher: "ICCAD 2025"
+        journal: |
+          ICCAD 2025
+          Paper Link: [doi.org/10.1109/ICCAD66269.2025.11240772](https://doi.org/10.1109/ICCAD66269.2025.11240772)
+        url: https://doi.org/10.1109/ICCAD66269.2025.11240772
+        releaseDate: "2025"
+
+      - title: "NestedFP: High-Performance, Memory-Efficient Dual-Precision Floating Point Support for LLMs"
+        authors:
+          - Haeun Lee
+          - "**Omin Kwon**"
+          - Yeonhong Park
+          - Jae W. Lee
+        publisher: "NeurIPS 2025"
+        journal: |
+          NeurIPS 2025
+          Paper Link: [neurips.cc/virtual/2025/loc/san-diego/poster/117613](https://neurips.cc/virtual/2025/loc/san-diego/poster/117613)
+        url: https://neurips.cc/virtual/2025/loc/san-diego/poster/117613
+        releaseDate: "2025"
+
+      - title: "AiDE: Attention-FFN Disaggregated Execution for Cost-Effective LLM Decoding on CXL-PNM"
+        authors:
+          - KyungSoo Kim
+          - "**Omin Kwon**"
+          - Yeonhong Park
+          - Jae W. Lee
+        publisher: "IEEE Computer Architecture Letters (CAL)"
+        journal: |
+          IEEE Computer Architecture Letters (CAL)
+          Paper Link: [doi.org/10.1109/LCA.2025.3597323](https://doi.org/10.1109/LCA.2025.3597323)
+        url: https://doi.org/10.1109/LCA.2025.3597323
+        releaseDate: "2025"
+
+    Experiences:
       - company: University of Illinois Urbana-Champaign (UIUC)
         position: Visiting Researcher
         location: Urbana, IL, USA
         start_date: 2026-03
-        end_date: present
+        end_date: 2026-05
         highlights:
           - "FAST Lab, hosted by Prof. Nam Sung Kim"
+
+      - company: Seoul National University
+        position: "Microelectronics (430.207B) Tutor"
+        location: Seoul, South Korea
+        start_date: 2025-03
+        end_date: 2025-06
+
+      - company: Seoul National University
+        position: "Digital System Design (430.315) Tutor"
+        location: Seoul, South Korea
+        start_date: 2024-09
+        end_date: 2024-12
+
+      - company: Seoul National University
+        position: "Computer Organization and Design (430.322) Tutor"
+        location: Seoul, South Korea
+        start_date: 2024-03
+        end_date: 2024-06
 
       - company: Republic of Korea Air Force
         position: Military Service
@@ -39,51 +153,43 @@ cv:
         start_date: 2021-05
         end_date: 2023-02
 
-    Publications:
-      - title: "AiDE: Attention-FFN Disaggregated Execution for Cost-Effective LLM Decoding on CXL-PNM"
-        authors:
-          - KyungSoo Kim
-          - Omin Kwon
-          - Yeonhong Park
-          - Jae W. Lee
-        publisher: "IEEE Computer Architecture Letters (CAL)"
-        releaseDate: "2025"
+    Presentations:
+      - name: "MAGE: All-[MASK] Block Already Knows Where to Look in Diffusion LLM"
+        date: 2026
+        summary: "Oral paper at the ICML 2026 AdaptFM Workshop (1.5%). [arXiv](https://arxiv.org/abs/2602.14209)."
 
-      - title: "STAR: Improving Lifetime and Performance of High-Capacity Modern SSDs Using State-Aware Randomizer"
-        authors:
-          - Omin Kwon
-          - Kyungjun Oh
-          - Jaeyong Lee
-          - Myungsuk Kim
-          - Jihong Kim
-        publisher: "IEEE/ACM International Conference On Computer Aided Design (ICCAD)"
-        releaseDate: "2025"
+      - name: "STAR: Improving Lifetime and Performance of High-Capacity Modern SSDs Using State-Aware Randomizer"
+        date: 2025
+        summary: "Oral presentation at ICCAD 2025, Munich. [Paper](https://doi.org/10.1109/ICCAD66269.2025.11240772)."
 
-      - title: "NestedFP: High-Performance, Memory-Efficient Dual-Precision Floating Point Support for LLMs"
-        authors:
-          - Haeun Lee
-          - Omin Kwon
-          - Yeonhong Park
-          - Jae W. Lee
-        publisher: "39th Annual Conference on Neural Information Processing Systems (NeurIPS)"
-        releaseDate: "2025"
+    "Honors & Awards":
+      - name: "Grand Prize (Minister of Science and ICT Award), 2024 AI Semiconductor Idea and Design Contest"
+        title: "Grand Prize (Minister of Science and ICT Award), 2024 AI Semiconductor Idea and Design Contest"
+        awarder: "Ministry of Science and ICT"
+        date: 2025-01
+        url: https://m.edaily.co.kr/News/Read?newsId=03581766642040672&mediaCodeNo=257
+        summary: "Designed a resolution-aware diffusion accelerator leveraging computational staleness. News: [Edaily](https://m.edaily.co.kr/News/Read?newsId=03581766642040672&mediaCodeNo=257)."
 
-      - title: "MAGE: All-[MASK] Block Already Knows Where to Look in Diffusion LLM"
-        authors:
-          - Omin Kwon
-          - Yeonjae Kim
-          - Doyeon Kim
-          - Minseo Kim
-          - Yeonhong Park
-          - Jae W. Lee
-        publisher: "Under Review (arXiv:2602.14209)"
-        releaseDate: "2026"
+      - name: "Grand Prize (Deputy Prime Minister and Minister of Education Award), 2024 STOB League Semiconductor Contest"
+        title: "Grand Prize (Deputy Prime Minister and Minister of Education Award), 2024 STOB League Semiconductor Contest"
+        awarder: "Ministry of Education"
+        date: 2024-12
+        url: https://www.donga.com/news/amp/all/20250123/130916601/2
+        summary: "Designed a state-aware data randomizer for high-performance SSDs, improving performance and device lifetime. News: [Dong-A Ilbo](https://www.donga.com/news/amp/all/20250123/130916601/2)."
 
-    Interests:
-      - name: Computer Architecture
-        icon: fa-solid fa-microchip
-        keywords: "Hardware-Software Co-design, Processing-in-Memory"
+      - name: "Grand Prize, 2024 FriendliAI LLM Hackathon"
+        title: "Grand Prize, 2024 FriendliAI LLM Hackathon"
+        awarder: "FriendliAI"
+        date: 2024-07
+        summary: "Developed a knowledge-graph RAG application using the FriendliAI API."
 
-      - name: Machine Learning Systems
-        icon: fa-solid fa-brain
-        keywords: "LLM Inference Optimization, Efficient Deep Learning"
+      - name: "SNU Specialized Semiconductor College Scholarship"
+        title: "SNU Specialized Semiconductor College Scholarship"
+        awarder: "Seoul National University"
+        start_date: 2024-08
+        end_date: 2025-08
+
+      - name: "Merit-Based Scholarship"
+        title: "Merit-Based Scholarship"
+        awarder: "Seoul National University"
+        date: "2023, 2024"

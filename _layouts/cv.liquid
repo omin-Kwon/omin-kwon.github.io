@@ -120,32 +120,10 @@ layout: default
           </div>
         {% endif %}
 
-        <!-- RenderCV Sections - Merge Experience and Volunteer -->
-        {% comment %} First, combine Experience and Volunteer entries {% endcomment %}
-        {% assign empty_array = '' | split: ',' %}
-        {% assign exp = cv.sections.Experience | default: empty_array %}
-        {% assign vol = cv.sections.Volunteer | default: empty_array %}
-        {% assign combined_experience = exp | concat: vol %}
-        {% if combined_experience.size > 0 %}
-          <a class="anchor" id="experience"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Experience</h3>
-            <div>
-              {% assign entries = combined_experience %}
-              {% include cv/experience.liquid %}
-            </div>
-          </div>
-        {% endif %}
-
-        {% comment %} Now render all other sections except Experience and Volunteer {% endcomment %}
+        {% comment %} Render sections in the same order as _data/cv.yml. {% endcomment %}
         {% for section_pair in cv.sections %}
           {% assign section_title = section_pair[0] %}
           {% assign section_entries = section_pair[1] %}
-
-          {% comment %} Skip Experience and Volunteer as we've already processed them combined {% endcomment %}
-          {% if section_title == 'Experience' or section_title == 'Volunteer' %}
-            {% continue %}
-          {% endif %}
 
           <a class="anchor" id="{{ section_title | slugify }}"></a>
           <div class="card mt-3 p-3">
@@ -154,7 +132,15 @@ layout: default
               {% if section_title == 'Education' %}
                 {% assign entries = section_entries %}
                 {% include cv/education.liquid %}
-              {% elsif section_title == 'Awards' or section_title == 'Honors and Awards' %}
+              {% elsif section_title == 'Experience'
+                or section_title == 'Experiences'
+                or section_title == 'Volunteer'
+                or section_title == 'Teaching and Mentorship'
+                or section_title == 'Teaching'
+              %}
+                {% assign entries = section_entries %}
+                {% include cv/experience.liquid %}
+              {% elsif section_title == 'Awards' or section_title == 'Honors and Awards' or section_title == 'Honors & Awards' %}
                 {% assign entries = section_entries %}
                 {% include cv/awards.liquid %}
               {% elsif section_title == 'Publications' %}
@@ -180,17 +166,46 @@ layout: default
                 {% include cv/references.liquid %}
               {% else %}
                 <!-- Generic section -->
-                {% for entry in section_entries %}
-                  {% if entry.bullet %}
-                    <ul class="card-text font-weight-light list-group list-group-flush">
-                      <li class="list-group-item">{{ entry.bullet | markdownify | remove: '<p>' | remove: '</p>' }}</li>
-                    </ul>
-                  {% elsif entry.label %}
-                    <div class="card-text font-weight-light">
-                      <strong>{{ entry.label }}:</strong> {{ entry.details }}
-                    </div>
-                  {% endif %}
-                {% endfor %}
+                <ul class="card-text font-weight-light list-group list-group-flush">
+                  {% for entry in section_entries %}
+                    <li class="list-group-item">
+                      {% if entry.name or entry.title %}
+                        {% assign entry_title = entry.name | default: entry.title %}
+                        {% if entry.url %}
+                          <h6 class="title font-weight-bold">
+                            <a href="{{ entry.url }}" target="_blank">{{ entry_title }}</a>
+                          </h6>
+                        {% else %}
+                          <h6 class="title font-weight-bold">{{ entry_title }}</h6>
+                        {% endif %}
+                      {% endif %}
+                      {% if entry.date %}
+                        <h6 style="font-size: 0.95rem; font-style: italic">{{ entry.date }}</h6>
+                      {% endif %}
+                      {% if entry.awarder or entry.company or entry.organization %}
+                        <h6 style="font-size: 0.95rem">{{ entry.awarder | default: entry.company | default: entry.organization }}</h6>
+                      {% endif %}
+                      {% if entry.summary %}
+                        <p>{{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+                      {% endif %}
+                      {% if entry.highlights %}
+                        <ul class="items">
+                          {% for item in entry.highlights %}
+                            <li>
+                              <span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      {% elsif entry.bullet %}
+                        {{ entry.bullet | markdownify | remove: '<p>' | remove: '</p>' }}
+                      {% elsif entry.label %}
+                        <strong>{{ entry.label }}:</strong> {{ entry.details }}
+                      {% elsif entry.name == blank and entry.title == blank %}
+                        {{ entry | markdownify | remove: '<p>' | remove: '</p>' }}
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                </ul>
               {% endif %}
             </div>
           </div>
