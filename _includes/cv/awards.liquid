@@ -8,17 +8,23 @@
       <div class="row">
         {% assign award_date = '' %}
         {% if entry.date %}
-          {% assign award_date = entry.date %}
-          {% if award_date contains '-' %}
-            {% assign award_date = award_date | split: '-' | first %}
-          {% endif %}
+          {% capture award_date %}
+            {% include cv/date.liquid date=entry.date %}
+          {% endcapture %}
+          {% assign award_date = award_date | strip %}
         {% elsif entry.start_date %}
-          {% assign award_date = entry.start_date | date: '%b %Y' %}
+          {% capture start_date %}
+            {% include cv/date.liquid date=entry.start_date %}
+          {% endcapture %}
           {% if entry.end_date %}
-            {% assign end_date = entry.end_date | date: '%b %Y' %}
+            {% capture end_date %}
+              {% include cv/date.liquid date=entry.end_date %}
+            {% endcapture %}
           {% else %}
-            {% assign end_date = 'Present' %}
+            {% assign end_date = 'present' %}
           {% endif %}
+          {% assign award_date = start_date | strip %}
+          {% assign end_date = end_date | strip %}
           {% assign award_date = award_date | append: ' - ' | append: end_date %}
         {% endif %}
 

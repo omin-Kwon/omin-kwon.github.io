@@ -83,6 +83,12 @@ layout: default
                   <td class="p-1 pl-2 font-weight-light">{{ cv.email }}</td>
                 </tr>
               {% endif %}
+              {% if cv.location %}
+                <tr>
+                  <td class="p-1 pr-2 font-weight-bold"><b>Location</b></td>
+                  <td class="p-1 pl-2 font-weight-light">{{ cv.location }}</td>
+                </tr>
+              {% endif %}
               {% if cv.phone %}
                 <tr>
                   <td class="p-1 pr-2 font-weight-bold"><b>Phone</b></td>
@@ -107,6 +113,26 @@ layout: default
                     <a href="{{ cv.website }}" target="_blank">{{ cv.website }}</a>
                   </td>
                 </tr>
+              {% endif %}
+              {% if cv.social_networks %}
+                {% for social in cv.social_networks %}
+                  {% assign social_url = social.url %}
+                  {% if social_url == blank and social.network == 'LinkedIn' %}
+                    {% assign social_url = 'https://www.linkedin.com/in/' | append: social.username %}
+                  {% endif %}
+                  <tr>
+                    <td class="p-1 pr-2 font-weight-bold">
+                      <b>{{ social.network }}</b>
+                    </td>
+                    <td class="p-1 pl-2 font-weight-light">
+                      {% if social_url %}
+                        <a href="{{ social_url }}" target="_blank" rel="noopener noreferrer">{{ social.username }}</a>
+                      {% else %}
+                        {{ social.username }}
+                      {% endif %}
+                    </td>
+                  </tr>
+                {% endfor %}
               {% endif %}
             </table>
           </div>
