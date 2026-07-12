@@ -73,9 +73,9 @@ cv:
           - Minseo Kim
           - Yeonhong Park
           - Jae W. Lee
-        publisher: "ICML 2026 AdaptFM Workshop (Oral); extended version under review"
+        publisher: "ICML 2026 AdaptFM Workshop (Best Paper Award); extended version under review"
         journal: |
-          ICML 2026 AdaptFM Workshop (Oral); extended version under review
+          ICML 2026 AdaptFM Workshop (Best Paper Award); extended version under review
           Paper Link: [arxiv.org/abs/2602.14209](https://arxiv.org/abs/2602.14209)
         url: https://arxiv.org/abs/2602.14209
         releaseDate: "2026"
@@ -156,13 +156,19 @@ cv:
     Presentations:
       - name: "MAGE: All-[MASK] Block Already Knows Where to Look in Diffusion LLM"
         date: 2026
-        summary: "Oral paper at the ICML 2026 AdaptFM Workshop (1.5%). [arXiv](https://arxiv.org/abs/2602.14209)."
+        summary: "Oral presentation at the ICML 2026 AdaptFM Workshop. [arXiv](https://arxiv.org/abs/2602.14209)."
 
       - name: "STAR: Improving Lifetime and Performance of High-Capacity Modern SSDs Using State-Aware Randomizer"
         date: 2025
         summary: "Oral presentation at ICCAD 2025, Munich. [Paper](https://doi.org/10.1109/ICCAD66269.2025.11240772)."
 
     "Honors & Awards":
+      - name: "Best Paper Award @ ICML26 AdaptFM Workshop"
+        title: "Best Paper Award @ ICML26 AdaptFM Workshop"
+        awarder: "ICML 2026 AdaptFM Workshop"
+        date: 2026-07
+        summary: "1 Best Paper among 123 accepted papers from 218 submissions."
+
       - name: "Grand Prize (Minister of Science and ICT Award), 2024 AI Semiconductor Idea and Design Contest"
         title: "Grand Prize (Minister of Science and ICT Award), 2024 AI Semiconductor Idea and Design Contest"
         awarder: "Ministry of Science and ICT"
