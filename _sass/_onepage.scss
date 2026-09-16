@@ -22,7 +22,7 @@
     min-height: 64px;
     border: 0;
     border-bottom: 0;
-    background: linear-gradient(180deg, #c4e2f9 0%, #d2ebff 100%);
+    background: linear-gradient(180deg, #42a9e8 0%, #69bdf0 100%);
     box-shadow: none;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -196,7 +196,7 @@ html {
   isolation: isolate;
   overflow: hidden;
   padding: 132px 0 78px;
-  background: linear-gradient(180deg, #d2ebff 0%, #e4f3ff 52%, #f7fbff 82%, #fff 100%);
+  background: linear-gradient(180deg, #69bdf0 0%, #95d2f4 46%, #d9effc 79%, #fff 100%);
   scroll-margin-top: 64px;
 
   &::before {
@@ -210,30 +210,6 @@ html {
     pointer-events: none;
     mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 100%);
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 100%);
-  }
-
-  &::after {
-    position: absolute;
-    z-index: 0;
-    inset: 0;
-    content: "";
-    background:
-      radial-gradient(circle at 7% 23%, rgba(238, 246, 255, 0.95) 0 1px, transparent 1.8px),
-      radial-gradient(circle at 16% 67%, rgba(205, 220, 235, 0.78) 0 1.2px, transparent 2px),
-      radial-gradient(circle at 25% 14%, rgba(241, 247, 255, 0.82) 0 0.8px, transparent 1.7px),
-      radial-gradient(circle at 35% 78%, rgba(197, 217, 235, 0.72) 0 1px, transparent 1.8px),
-      radial-gradient(circle at 44% 29%, rgba(236, 244, 252, 0.8) 0 1.1px, transparent 2px),
-      radial-gradient(circle at 55% 11%, rgba(207, 225, 240, 0.76) 0 0.8px, transparent 1.6px),
-      radial-gradient(circle at 63% 71%, rgba(238, 246, 255, 0.9) 0 1.2px, transparent 2.1px),
-      radial-gradient(circle at 72% 26%, rgba(194, 215, 233, 0.72) 0 0.9px, transparent 1.8px),
-      radial-gradient(circle at 81% 59%, rgba(239, 247, 255, 0.88) 0 1px, transparent 1.9px),
-      radial-gradient(circle at 91% 17%, rgba(208, 225, 240, 0.78) 0 1.2px, transparent 2.1px),
-      radial-gradient(circle at 96% 76%, rgba(239, 247, 255, 0.84) 0 0.9px, transparent 1.8px),
-      radial-gradient(circle at 12% 88%, rgba(205, 222, 237, 0.7) 0 0.8px, transparent 1.6px);
-    filter: drop-shadow(0 0 4px rgba(202, 227, 249, 0.72));
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 450ms ease;
   }
 }
 
@@ -808,17 +784,14 @@ html[data-theme="dark"] {
   }
 
   .onepage-intro {
-    background: linear-gradient(180deg, #091421 0%, #0b1c2b 48%, #0a141f 78%, #080d14 100%);
+    background: linear-gradient(180deg, #091421 0%, #0b1c2b 40%, #09121c 68%, #080d14 82%, #080d14 100%);
 
     &::before {
       background:
         radial-gradient(circle at 18% 36%, rgba(139, 188, 226, 0.16) 0, rgba(100, 154, 197, 0.06) 24%, transparent 45%),
         radial-gradient(circle at 78% 44%, rgba(173, 210, 239, 0.12) 0, rgba(100, 154, 197, 0.04) 27%, transparent 50%);
-    }
-
-    &::after {
-      opacity: 0.82;
-      animation: night-stars-shimmer 5.5s ease-in-out infinite alternate;
+      mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 68%, transparent 94%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 68%, transparent 94%);
     }
   }
 
@@ -889,21 +862,6 @@ html[data-theme="dark"] {
 
   .onepage-news .news-grand-prize {
     color: #e0b84d;
-  }
-}
-
-@keyframes night-stars-shimmer {
-  0%,
-  20% {
-    opacity: 0.68;
-  }
-
-  65% {
-    opacity: 0.9;
-  }
-
-  100% {
-    opacity: 0.76;
   }
 }
 
@@ -1030,9 +988,5 @@ html[data-theme="dark"] {
 
   .intro-portrait .intro-portrait-card {
     transition: none;
-  }
-
-  html[data-theme="dark"] .onepage-intro::after {
-    animation: none;
   }
 }
