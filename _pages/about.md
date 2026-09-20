@@ -28,6 +28,6 @@ research_areas:
     description: Exploring memory, storage, and heterogeneous systems for emerging AI workloads.
 ---
 
-I am an M.S. candidate in the Department of Computer Science and Engineering at Seoul National University. I am fortunate to be advised by Prof. [Jae W. Lee](https://arc.snu.ac.kr), Director of the AI Institute of Seoul National University, and am a member of the [Architecture and Code Optimization (ARC) Lab](https://arc.snu.ac.kr). I also collaborate with [Prof. Sehoon Kim](https://sehoonkim.org/), an Assistant Professor at KAIST AI, who co-advises my current research in ML systems.
+I am an M.S. candidate in the Department of Computer Science and Engineering at Seoul National University. I am fortunate to be advised by Prof. [Jae W. Lee](https://iamjaelee.github.io/www/), Director of the AI Institute of Seoul National University, and am a member of the [Architecture and Code Optimization (ARC) Lab](https://arc.snu.ac.kr). I also collaborate with [Prof. Sehoon Kim](https://sehoonkim.org/), an Assistant Professor at KAIST AI, who co-advises my current research in ML systems.
 
 I am interested in efficient computing through the co-design of algorithms, systems, and architectures. My current research focuses on improving the inference efficiency of diffusion language models and hybrid-attention models through ML algorithm-system co-design. In the long term, I aim to build reliable and efficient long-horizon AI and robotic agents.
