@@ -157,6 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const publicationCategories = {
     kwon2026herald: "ml-systems",
+    kwon2026elixir: "computer-architecture",
     kwon2026mage: "ml-algorithms",
     lee2025nestedfp: "ml-systems",
     kim2025aide: "computer-architecture",

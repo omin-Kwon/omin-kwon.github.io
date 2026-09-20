@@ -38,6 +38,7 @@ cv:
 
       - institution: Hansung Science High School
         location: Seoul, South Korea
+        area: Science
         degree: High School Diploma
         start_date: 2017-03
         end_date: 2019-03
@@ -62,11 +63,13 @@ cv:
       - title: "ELIXIR: Disaggregating FFN, Attention, and KV Cache via CXL-PNM for Elastic LLM Serving"
         authors:
           - '**Omin Kwon**\*'
-          - 'Kyungsoo Kim\*'
-          - Ugyeong Song
-          - Yeonhong Park
+          - 'KyungSoo Kim\*'
+          - Haneul Park
+          - JoongWon Shin
           - Nachuan Wang
-          - Namsung Kim
+          - UGyeong Song
+          - Yeonhong Park
+          - Nam Sung Kim
           - Jae W. Lee
         publisher: "Under review"
         journal: "Under review"
