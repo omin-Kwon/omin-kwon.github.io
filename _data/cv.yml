@@ -83,9 +83,9 @@ cv:
           - Minseo Kim
           - Yeonhong Park
           - Jae W. Lee
-        publisher: "ICML 2026 AdaptFM Workshop (Best Paper Award); extended version under review"
+        publisher: "NeurIPS 2026; ICML 2026 AdaptFM Workshop (Best Paper Award)"
         journal: |
-          ICML 2026 AdaptFM Workshop (Best Paper Award); extended version under review
+          NeurIPS 2026; ICML 2026 AdaptFM Workshop (Best Paper Award)
           Paper Link: [arxiv.org/abs/2602.14209](https://arxiv.org/abs/2602.14209)
         url: https://arxiv.org/abs/2602.14209
         releaseDate: "2026"
