@@ -166,7 +166,8 @@ document.addEventListener("DOMContentLoaded", () => {
     kwon2026herald: "ml-systems",
     kwon2026elixir: "computer-architecture",
     kwon2026mage: "ml-algorithms",
-    lee2025nestedfp: "ml-systems",
+    kwon2026sketchssm: "ml-systems",
+    lee2025nestedfp: "ml-algorithms",
     kim2025aide: "computer-architecture",
     kwon2025star: "computer-architecture",
   };
