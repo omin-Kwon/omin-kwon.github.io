@@ -1,3 +1,8 @@
+// Optional visual effects. Set pointerContrail to true to restore the cursor trail.
+const ONEPAGE_FEATURES = Object.freeze({
+  pointerContrail: false,
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = [...document.querySelectorAll(".onepage-nav a[href^='#']")];
   const sections = navLinks.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
@@ -42,7 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const networkCanvas = intro?.querySelector(".intro-network");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  if (intro && networkCanvas && !reduceMotion) {
+  if (networkCanvas) networkCanvas.hidden = !ONEPAGE_FEATURES.pointerContrail;
+
+  if (ONEPAGE_FEATURES.pointerContrail && intro && networkCanvas && !reduceMotion) {
     const context = networkCanvas.getContext("2d");
     const trailLifetime = 2600;
     let trail = [];
