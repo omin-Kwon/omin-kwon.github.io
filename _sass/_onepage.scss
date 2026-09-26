@@ -437,8 +437,8 @@ html {
   padding: 7px 14px;
   border: 1px solid var(--publication-category-color);
   border-radius: 999px;
-  color: var(--publication-category-color);
-  background: #fff;
+  color: #fff;
+  background: var(--publication-category-color);
   font-family: inherit;
   font-size: 15px;
   font-weight: 600;
@@ -447,10 +447,11 @@ html {
   transition:
     color 160ms ease,
     background-color 160ms ease,
-    border-color 160ms ease;
+    border-color 160ms ease,
+    box-shadow 160ms ease;
 
   &:hover {
-    background: #f6f9fc;
+    filter: brightness(1.08);
   }
 
   &:focus-visible {
@@ -459,9 +460,9 @@ html {
   }
 
   &.is-active {
-    border-color: var(--publication-category-color);
-    color: #fff;
-    background: var(--publication-category-color);
+    box-shadow:
+      0 0 0 3px #fff,
+      0 0 0 5px var(--publication-category-color);
   }
 }
 
@@ -478,13 +479,6 @@ html {
 [data-publication-filter="computer-architecture"],
 [data-publication-category="computer-architecture"] {
   --publication-category-color: #4a718f;
-}
-
-.publication-filter-empty {
-  margin: 24px 0 0;
-  color: var(--muted) !important;
-  font-size: 16px;
-  line-height: 27px;
 }
 
 .research-list {
@@ -831,18 +825,19 @@ html[data-theme="dark"] {
     color: #b7c3cf !important;
   }
 
-  .publication-filter,
   .onepage-publications .publication-area-tag {
     background: #080d14;
   }
 
-  .publication-filter:hover {
-    background: #111e2b;
+  .publication-filter {
+    color: #07111b;
+    background: var(--publication-category-color);
   }
 
   .publication-filter.is-active {
-    color: #07111b;
-    background: var(--publication-category-color);
+    box-shadow:
+      0 0 0 3px #080d14,
+      0 0 0 5px var(--publication-category-color);
   }
 
   [data-publication-filter="ml-systems"],

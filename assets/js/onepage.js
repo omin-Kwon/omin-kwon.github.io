@@ -194,28 +194,25 @@ document.addEventListener("DOMContentLoaded", () => {
       return item;
     })
     .filter(Boolean);
-  const emptyMessage = document.querySelector(".publication-filter-empty");
+  let selectedCategory = null;
 
   const updatePublicationFilters = () => {
-    const activeCategories = new Set(
-      filterButtons.filter((button) => button.getAttribute("aria-pressed") === "true").map((button) => button.dataset.publicationFilter)
-    );
-    let visibleCount = 0;
-
-    publicationItems.forEach((item) => {
-      const isVisible = activeCategories.has(item.dataset.publicationCategory);
-      item.hidden = !isVisible;
-      if (isVisible) visibleCount += 1;
+    filterButtons.forEach((button) => {
+      const isSelected = button.dataset.publicationFilter === selectedCategory;
+      button.setAttribute("aria-pressed", String(isSelected));
+      button.classList.toggle("is-active", isSelected);
     });
 
-    if (emptyMessage) emptyMessage.hidden = visibleCount !== 0;
+    publicationItems.forEach((item) => {
+      const isVisible = !selectedCategory || item.dataset.publicationCategory === selectedCategory;
+      item.hidden = !isVisible;
+    });
   };
 
   filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      const isActive = button.getAttribute("aria-pressed") === "true";
-      button.setAttribute("aria-pressed", String(!isActive));
-      button.classList.toggle("is-active", !isActive);
+      const category = button.dataset.publicationFilter;
+      selectedCategory = selectedCategory === category ? null : category;
       updatePublicationFilters();
     });
   });

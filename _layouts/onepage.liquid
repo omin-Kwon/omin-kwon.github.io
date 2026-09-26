@@ -86,19 +86,18 @@ layout: default
     <div class="onepage-inner">
       <h2 id="publications-title">Publications</h2>
       <div class="publication-filters" role="group" aria-label="Filter publications by research area">
-        <button class="publication-filter is-active" type="button" data-publication-filter="ml-systems" aria-pressed="true">ML Systems</button>
-        <button class="publication-filter is-active" type="button" data-publication-filter="ml-algorithms" aria-pressed="true">ML Algorithms</button>
+        <button class="publication-filter" type="button" data-publication-filter="ml-systems" aria-pressed="false">ML Systems</button>
+        <button class="publication-filter" type="button" data-publication-filter="ml-algorithms" aria-pressed="false">ML Algorithms</button>
         <button
-          class="publication-filter is-active"
+          class="publication-filter"
           type="button"
           data-publication-filter="computer-architecture"
-          aria-pressed="true"
+          aria-pressed="false"
         >
           Computer Arch.
         </button>
       </div>
       <div class="onepage-publications">{% include selected_papers.liquid %}</div>
-      <p class="publication-filter-empty" role="status" hidden>No publication categories are selected.</p>
     </div>
   </section>
 
