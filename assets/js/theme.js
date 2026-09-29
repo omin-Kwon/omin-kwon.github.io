@@ -93,14 +93,13 @@ let applyTheme = () => {
 
 // Keep the one-page sun/moon switch in sync with the active theme.
 let updateThemeToggle = (theme) => {
-  const modeToggle = document.getElementById("light-toggle");
-  if (!modeToggle || !modeToggle.matches("[data-binary-theme]")) return;
-
   const isDark = theme === "dark";
   const nextMode = isDark ? "day" : "night";
-  modeToggle.setAttribute("aria-pressed", String(isDark));
-  modeToggle.setAttribute("aria-label", `Switch to ${nextMode} mode`);
-  modeToggle.setAttribute("title", `Switch to ${nextMode} mode`);
+  document.querySelectorAll("[data-binary-theme]").forEach((modeToggle) => {
+    modeToggle.setAttribute("aria-pressed", String(isDark));
+    modeToggle.setAttribute("aria-label", `Switch to ${nextMode} mode`);
+    modeToggle.setAttribute("title", `Switch to ${nextMode} mode`);
+  });
 };
 
 let setHighlight = (theme) => {
@@ -311,14 +310,16 @@ let initTheme = () => {
 
   // Add event listener to the theme toggle button.
   document.addEventListener("DOMContentLoaded", function () {
-    const mode_toggle = document.getElementById("light-toggle");
+    const mode_toggles = document.querySelectorAll("#light-toggle, [data-binary-theme]");
 
-    mode_toggle.addEventListener("click", function () {
-      if (mode_toggle.matches("[data-binary-theme]")) {
-        setThemeSetting(determineComputedTheme() === "dark" ? "light" : "dark");
-      } else {
-        toggleThemeSetting();
-      }
+    mode_toggles.forEach((mode_toggle) => {
+      mode_toggle.addEventListener("click", function () {
+        if (mode_toggle.matches("[data-binary-theme]")) {
+          setThemeSetting(determineComputedTheme() === "dark" ? "light" : "dark");
+        } else {
+          toggleThemeSetting();
+        }
+      });
     });
 
     updateThemeToggle(determineComputedTheme());

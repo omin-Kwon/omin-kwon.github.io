@@ -50,6 +50,42 @@ layout: default
         </div>
       </div>
     </div>
+    <nav class="onepage-inner intro-mobile-nav" aria-label="Mobile site sections">
+      <ul class="onepage-nav">
+        <li><a class="nav-link active" href="#about">About</a></li>
+        <li><a class="nav-link" href="#research">Research</a></li>
+        <li><a class="nav-link" href="#publications">Publications</a></li>
+        <li><a class="nav-link" href="#news">News</a></li>
+        <li><a class="nav-link" href="#experience">Experience</a></li>
+        <li>
+          <a
+            class="nav-link"
+            href="{{ '/assets/rendercv/rendercv_output/Omin_Kwon_CV.pdf' | relative_url }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CV
+          </a>
+        </li>
+        {% if site.enable_darkmode %}
+          <li class="onepage-theme-container">
+            <button
+              id="mobile-light-toggle"
+              class="onepage-theme-toggle"
+              type="button"
+              data-binary-theme="true"
+              title="Switch to night mode"
+              aria-label="Switch to night mode"
+              aria-pressed="false"
+            >
+              <i class="fa-solid fa-sun theme-sun" aria-hidden="true"></i>
+              <span class="theme-toggle-track" aria-hidden="true"><span class="theme-toggle-thumb"></span></span>
+              <i class="fa-solid fa-moon theme-moon" aria-hidden="true"></i>
+            </button>
+          </li>
+        {% endif %}
+      </ul>
+    </nav>
   </section>
 
   <section id="about" class="onepage-section reveal-section" aria-labelledby="about-title">
@@ -133,8 +169,12 @@ layout: default
             <article class="timeline-item">
               <p class="timeline-date">{{ item.start_date }} — {{ item.end_date }}</p>
               <h4>
-                {{- item.degree -}}
-                {% if item.area %} in {{ item.area }}{% endif %}
+                {% if item.institution == 'Hansung Science High School' %}
+                  High School Diploma{% if item.area %} in {{ item.area }}{% endif %}
+                {% else %}
+                  {{- item.degree -}}
+                  {% if item.area %} in {{ item.area }}{% endif %}
+                {% endif %}
               </h4>
               <p class="timeline-meta">{{ item.institution }} · {{ item.location }}</p>
               {% if item.note %}

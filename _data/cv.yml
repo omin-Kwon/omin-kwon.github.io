@@ -39,12 +39,24 @@ cv:
       - institution: Hansung Science High School
         location: Seoul, South Korea
         area: Science
-        degree: High School Diploma
+        degree: H.S.
         start_date: 2017-03
         end_date: 2019-03
         note: Early graduation with academic excellence
 
     Publications:
+      - title: "SketchSSM: Write to the Full State, Read from a Compact Sketch"
+        authors:
+          - "**Omin Kwon**"
+          - JoongWon Shin
+          - Minseo Kim
+          - Kurt Keutzer
+          - Sehoon Kim
+          - Jae W. Lee
+        publisher: "Under review"
+        journal: "Under review"
+        releaseDate: "2026"
+
       - title: "HERALD: High Throughput Block Diffusion LLM Serving via CPU-GPU Cooperative KV Cache Retrieval"
         authors:
           - "**Omin Kwon**"
@@ -54,9 +66,7 @@ cv:
           - Ion Stoica
           - Jae W. Lee
         publisher: "Under review"
-        journal: |
-          Under review
-          Paper Link: [arxiv.org/abs/2606.21633](https://arxiv.org/abs/2606.21633)
+        journal: "Under review"
         url: https://arxiv.org/abs/2606.21633
         releaseDate: "2026"
 
@@ -84,9 +94,7 @@ cv:
           - Yeonhong Park
           - Jae W. Lee
         publisher: "NeurIPS 2026; ICML 2026 AdaptFM Workshop (Best Paper Award)"
-        journal: |
-          NeurIPS 2026; ICML 2026 AdaptFM Workshop (Best Paper Award)
-          Paper Link: [arxiv.org/abs/2602.14209](https://arxiv.org/abs/2602.14209)
+        journal: "NeurIPS 2026; ICML 2026 AdaptFM Workshop (Best Paper Award)"
         url: https://arxiv.org/abs/2602.14209
         releaseDate: "2026"
 
@@ -98,9 +106,7 @@ cv:
           - Myungsuk Kim
           - Jihong Kim
         publisher: "ICCAD 2025"
-        journal: |
-          ICCAD 2025
-          Paper Link: [doi.org/10.1109/ICCAD66269.2025.11240772](https://doi.org/10.1109/ICCAD66269.2025.11240772)
+        journal: "ICCAD 2025"
         url: https://doi.org/10.1109/ICCAD66269.2025.11240772
         releaseDate: "2025"
 
@@ -111,9 +117,7 @@ cv:
           - Yeonhong Park
           - Jae W. Lee
         publisher: "NeurIPS 2025"
-        journal: |
-          NeurIPS 2025
-          Paper Link: [neurips.cc/virtual/2025/loc/san-diego/poster/117613](https://neurips.cc/virtual/2025/loc/san-diego/poster/117613)
+        journal: "NeurIPS 2025"
         url: https://neurips.cc/virtual/2025/loc/san-diego/poster/117613
         releaseDate: "2025"
 
@@ -124,13 +128,17 @@ cv:
           - Yeonhong Park
           - Jae W. Lee
         publisher: "IEEE Computer Architecture Letters (CAL)"
-        journal: |
-          IEEE Computer Architecture Letters (CAL)
-          Paper Link: [doi.org/10.1109/LCA.2025.3597323](https://doi.org/10.1109/LCA.2025.3597323)
+        journal: "IEEE Computer Architecture Letters (CAL)"
         url: https://doi.org/10.1109/LCA.2025.3597323
         releaseDate: "2025"
 
     Experiences:
+      - company: Seoul National University
+        position: "Teaching Assistant, Advanced Computer Architecture (4190.571)"
+        location: Seoul, South Korea
+        start_date: 2026-09
+        end_date: present
+
       - company: University of Illinois Urbana-Champaign (UIUC)
         position: Visiting Researcher
         location: Urbana, IL, USA
