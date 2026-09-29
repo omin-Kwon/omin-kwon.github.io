@@ -70,21 +70,6 @@ cv:
         url: https://arxiv.org/abs/2606.21633
         releaseDate: "2026"
 
-      - title: "ELIXIR: Disaggregating FFN, Attention, and KV Cache via CXL-PNM for Elastic LLM Serving"
-        authors:
-          - '**Omin Kwon**\*'
-          - 'KyungSoo Kim\*'
-          - Haneul Park
-          - JoongWon Shin
-          - Nachuan Wang
-          - UGyeong Song
-          - Yeonhong Park
-          - Nam Sung Kim
-          - Jae W. Lee
-        publisher: "Under review"
-        journal: "Under review"
-        releaseDate: "2026"
-
       - title: "MAGE: All-[MASK] Block Already Knows Where to Look in Diffusion LLM"
         authors:
           - "**Omin Kwon**"
