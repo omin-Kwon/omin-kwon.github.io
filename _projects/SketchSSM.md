@@ -1,199 +1,351 @@
 ---
-layout: page
+layout: sketchssm
 title: SketchSSM
-description: Write to the Full State, Read from a Compact Sketch
+description: Write to the Full State, Read from a Compact Sketch. Faster hybrid-attention decoding without compressing the recurrent state.
 permalink: /project/SketchSSM/
 nav: false
-_styles: |
-  .sketchssm-page {
-    --sketch-orange: #ee922c;
-    --sketch-orange-dark: #ad5410;
-    --sketch-ink: #17324f;
-    max-width: 980px;
-    margin: 0 auto;
-  }
-
-  .sketchssm-page .paper-meta {
-    margin: -0.35rem 0 1.4rem;
-    color: var(--global-text-color);
-    font-size: 1.02rem;
-    line-height: 1.75;
-  }
-
-  .sketchssm-page .paper-authors,
-  .sketchssm-page .paper-affiliations {
-    margin: 0;
-    text-align: center;
-  }
-
-  .sketchssm-page .paper-affiliations {
-    margin-top: 0.35rem;
-    color: var(--global-text-color-light);
-    font-size: 0.9rem;
-  }
-
-  .sketchssm-page .paper-venue {
-    width: fit-content;
-    margin: 1rem auto 0;
-    padding: 0.38rem 0.82rem;
-    border: 1px solid color-mix(in srgb, var(--sketch-orange) 62%, transparent);
-    border-radius: 999px;
-    background: color-mix(in srgb, var(--sketch-orange) 10%, transparent);
-    color: var(--sketch-orange-dark);
-    font-size: 0.86rem;
-    font-weight: 650;
-    letter-spacing: 0.01em;
-  }
-
-  html[data-theme='dark'] .sketchssm-page .paper-venue {
-    color: #ffc176;
-  }
-
-  .sketchssm-page .paper-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.65rem;
-    margin: 1.3rem 0 2rem;
-  }
-
-  .sketchssm-page .paper-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    padding: 0.55rem 1rem;
-    border: 1px solid var(--global-divider-color);
-    border-radius: 0.55rem;
-    color: var(--sketch-ink);
-    font-weight: 650;
-    text-decoration: none;
-    transition: transform 160ms ease, border-color 160ms ease, color 160ms ease;
-  }
-
-  html[data-theme='dark'] .sketchssm-page .paper-link {
-    color: #dceaff;
-  }
-
-  .sketchssm-page .paper-link:hover {
-    transform: translateY(-2px);
-    border-color: var(--sketch-orange);
-    color: var(--sketch-orange-dark);
-  }
-
-  .sketchssm-page .paper-figure {
-    overflow: hidden;
-    margin: 0 0 2.2rem;
-    border: 1px solid var(--global-divider-color);
-    border-radius: 0.8rem;
-    background: #fff;
-  }
-
-  .sketchssm-page .paper-figure img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .sketchssm-page .paper-section {
-    margin-top: 2.2rem;
-  }
-
-  .sketchssm-page .paper-section h2 {
-    margin-bottom: 0.8rem;
-    color: var(--sketch-ink);
-    font-size: 1.45rem;
-  }
-
-  html[data-theme='dark'] .sketchssm-page .paper-section h2 {
-    color: #dceaff;
-  }
-
-  .sketchssm-page .paper-section p {
-    line-height: 1.75;
-  }
-
-  .sketchssm-page .takeaway {
-    padding: 1.15rem 1.3rem;
-    border-left: 4px solid var(--sketch-orange);
-    border-radius: 0 0.55rem 0.55rem 0;
-    background: color-mix(in srgb, var(--sketch-orange) 8%, var(--global-bg-color));
-    font-size: 1.04rem;
-  }
-
-  @media (max-width: 575px) {
-    .sketchssm-page .paper-meta {
-      font-size: 0.94rem;
-    }
-
-    .sketchssm-page .paper-affiliations span {
-      display: block;
-    }
-
-    .sketchssm-page .paper-venue {
-      text-align: center;
-    }
-  }
 ---
 
-<div class="sketchssm-page">
-  <div class="paper-meta">
-    <p class="paper-authors">
-      <strong>Omin Kwon</strong><sup>1</sup>, JoongWon Shin<sup>1</sup>, Minseo Kim<sup>2</sup>, Kurt Keutzer<sup>2</sup>,
-      Sehoon Kim<sup>3,*</sup>, and Jae W. Lee<sup>1,*</sup>
-    </p>
-    <p class="paper-affiliations">
-      <span><sup>1</sup>Seoul National University</span> ·
-      <span><sup>2</sup>University of California, Berkeley</span> ·
-      <span><sup>3</sup>KAIST</span>
-      <br>
-      <span><sup>*</sup>Co-corresponding authors</span>
-    </p>
-    <p class="paper-venue">NeurIPS 2026 LCFM Workshop · Extended version under review</p>
+<header class="project-hero" id="top">
+  <div class="project-brand">
+    <span class="project-mascot" role="img" aria-label="SketchSSM's smiling sketchbook character"></span>
+    <div class="project-wordmark">
+      <h1><span>Sketch</span>SSM</h1>
+      <p class="paper-title">Write to the <strong>Full State</strong>,<br>Read from a <strong class="sketch-emphasis">Compact Sketch</strong></p>
+    </div>
   </div>
-
-  <div class="paper-links" aria-label="Paper resources">
-    <a class="paper-link" href="{{ '/project/SketchSSM/' | relative_url }}">
-      <i class="fa-solid fa-house" aria-hidden="true"></i> Project
-    </a>
-    <a class="paper-link" href="https://arxiv.org/abs/2609.33051" target="_blank" rel="noopener noreferrer">
-      <i class="fa-solid fa-file-lines" aria-hidden="true"></i> Paper
-    </a>
-    <a class="paper-link" href="https://github.com/SNU-ARC/SketchSSM" target="_blank" rel="noopener noreferrer">
-      <i class="fa-brands fa-github" aria-hidden="true"></i> Code
-    </a>
-    <a class="paper-link" href="https://huggingface.co/SketchSSM" target="_blank" rel="noopener noreferrer">
-      <i class="fa-solid fa-database" aria-hidden="true"></i> Data
-    </a>
+  <div class="authors">
+    <span><a href="{{ '/' | relative_url }}">Omin Kwon</a><sup>1</sup></span>
+    <span>JoongWon Shin<sup>1</sup></span><span><a href="https://minseokim.org/">Minseo Kim</a><sup>2</sup></span><span><a href="https://keutzer.github.io/">Kurt Keutzer</a><sup>2</sup></span>
+    <span><a href="https://sehoonkim.org/">Sehoon Kim</a><sup>3</sup><sup class="corresponding-mark" role="img" aria-label="Co-corresponding author">◆</sup></span>
+    <span><a href="https://iamjaelee.github.io/www/">Jae W. Lee</a><sup>1</sup><sup class="corresponding-mark" role="img" aria-label="Co-corresponding author">◆</sup></span>
   </div>
+  <p class="affiliations"><span><sup>1</sup>Seoul National University</span><span><sup>2</sup>UC Berkeley</span><span><sup>3</sup>KAIST</span></p>
+  <p class="correspondence"><span class="corresponding-mark" aria-hidden="true">◆</span> Co-corresponding authors</p>
+  <div class="affiliation-logos" aria-label="Affiliated institutions">
+    <a href="https://en.snu.ac.kr/" aria-label="Seoul National University"><img class="snu-mark" src="{{ '/assets/projects/sketchssm/snu.svg' | relative_url }}" alt="Seoul National University"></a>
+    <a href="https://www.berkeley.edu/" aria-label="University of California, Berkeley"><img class="berkeley-mark" src="{{ '/assets/projects/sketchssm/berkeley.svg' | relative_url }}" alt="UC Berkeley"></a>
+    <a href="https://www.kaist.ac.kr/en/" class="kaist-mark" aria-label="KAIST"><img src="{{ '/assets/projects/sketchssm/kaist.gif' | relative_url }}" alt="KAIST"></a>
+  </div>
+  <nav class="resource-links" aria-label="Project resources">
+    <a href="https://arxiv.org/abs/2609.33051"><i class="ai ai-arxiv" aria-hidden="true"></i>Paper</a>
+    <a href="https://github.com/SNU-ARC/SketchSSM"><img src="{{ '/assets/projects/sketchssm/github-white.png' | relative_url }}" alt="" aria-hidden="true">Code</a>
+    <a href="https://huggingface.co/SketchSSM"><img src="{{ '/assets/projects/sketchssm/huggingface.webp' | relative_url }}" alt="" aria-hidden="true">Calibration Data</a>
+    <a href="https://pypi.org/project/sketchssm/"><span class="package-icon" aria-hidden="true">📦</span>PyPI</a>
+  </nav>
+</header>
 
-  <figure class="paper-figure">
-    <img
-      src="{{ '/assets/img/publication_preview/img_sketchssm.png' | relative_url }}"
-      alt="Overview of SketchSSM state-read sketching and flush scheduling"
-      loading="eager"
-    >
+<section class="demo-section" id="demo" aria-labelledby="demo-title">
+  <div class="section-heading"><h2 id="demo-title">Same model. Less memory traffic. Faster decoding.</h2></div>
+  <figure class="demo-figure">
+    <video controls playsinline muted preload="metadata" poster="{{ '/assets/projects/sketchssm/demo-poster.png' | relative_url }}" aria-label="Decode comparison: Standard, ReplaySSM, and SketchSSM" aria-describedby="demo-caption">
+      <source src="{{ '/assets/projects/sketchssm/sketchssm-demo.mp4' | relative_url }}" type="video/mp4">
+      <a href="{{ '/assets/projects/sketchssm/sketchssm-demo.mp4' | relative_url }}">Download the decode demonstration.</a>
+    </video>
+    <figcaption id="demo-caption">Nemotron Nano 9B v2 · 1× RTX PRO 6000 Blackwell · Batch 320<br><span>Decode shown at 8× playback speed. Prefill is computed ahead of time.</span></figcaption>
   </figure>
+  <div class="demo-stats" aria-label="Results for the demo configuration">
+    <div><strong>7,634<span> tokens/s</span></strong><p>SketchSSM decode throughput</p></div><div><strong>2.26<span>×</span></strong><p>faster than the standard baseline</p></div><div><strong>1.64<span>×</span></strong><p>faster than ReplaySSM</p></div>
+  </div>
+  <div class="demo-comparison">
+    <div class="demo-table-scroll" tabindex="0" role="region" aria-label="Demo results; scroll horizontally to view all metrics">
+    <table>
+      <caption>Demo results</caption>
+      <thead>
+        <tr><th scope="col" rowspan="2">Method</th><th scope="colgroup" colspan="5">Accuracy (%)</th><th scope="col" rowspan="2">Throughput<br>(tokens/s)</th><th scope="colgroup" colspan="2">Decode speedup</th></tr>
+        <tr><th scope="col">IFEval</th><th scope="col">MATH-500</th><th scope="col">HumanEval</th><th scope="col">MBPP</th><th scope="col">Average</th><th scope="col">vs Standard</th><th scope="col">vs ReplaySSM</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Standard</th><td>86.1 ± 1.3</td><td>67.7 ± 1.7</td><td>81.4 ± 2.5</td><td>71.1 ± 1.9</td><td>76.6 ± 0.9</td><td>3,383</td><td>1.00×</td><td>--</td></tr>
+        <tr><th scope="row">ReplaySSM</th><td>85.8 ± 1.3</td><td>66.4 ± 1.7</td><td>81.9 ± 2.4</td><td>70.8 ± 1.9</td><td>76.2 ± 0.9</td><td>4,669</td><td>1.38×</td><td>1.00×</td></tr>
+        <tr class="sketchssm-result"><th scope="row">SketchSSM</th><td>85.4 ± 1.3</td><td>67.5 ± 1.7</td><td>80.9 ± 2.6</td><td>70.9 ± 1.9</td><td>76.2 ± 1.0</td><td>7,634</td><td>2.26×</td><td>1.64×</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="table-note">Accuracy is reported as mean ± standard error over problems. Speedups and throughput are from the demo.</p>
+    <dl class="demo-settings">
+      <div><dt>Benchmarks</dt><dd>IFEval · MATH-500 · HumanEval · MBPP</dd></div>
+      <div><dt>Sampling</dt><dd>4 samples / prompt · Temperature 0.6 · lm-eval</dd></div>
+      <div><dt>SketchSSM</dt><dd>Mean sketch rank 8 · Window 16 steps</dd></div>
+    </dl>
+  </div>
+</section>
 
-  <section class="paper-section" aria-labelledby="sketchssm-overview">
-    <h2 id="sketchssm-overview">Overview</h2>
-    <p class="takeaway">
-      <strong>SketchSSM writes to the full recurrent state, but serves most reads from a compact sketch.</strong>
-      This reduces the memory traffic that limits high-throughput inference in hybrid-attention models.
-    </p>
-    <p>
-      Hybrid-attention models replace many softmax-attention layers with linear attention, enabling larger decode batches but
-      making recurrent-state access a growing bottleneck. SketchSSM keeps exact full-state updates while precomputing a compact
-      set of basis outputs at each update. Later decode steps reconstruct their outputs from this sketch, avoiding repeated
-      full-state reads while the state remains unchanged.
-    </p>
-  </section>
+<section class="paper-section" id="idea" aria-labelledby="idea-title">
+  <div class="section-heading"><p class="eyebrow">01 / The idea</p><h2 id="idea-title">Keep the state full.<br>Make the reads small.</h2></div>
+  <p class="section-lead">A recurrent state carries information into every future step. Compressing that state can carry approximation errors forward, too. SketchSSM preserves full-state updates and approximates only the readout to avoid propagating state-compression errors into subsequent decoding steps.<sup>*</sup></p>
+  <figure class="error-propagation" aria-labelledby="error-propagation-title">
+    <h3 id="error-propagation-title">How state-compression errors carry forward</h3>
+    <p class="error-intro">Each update inherits the previous state's error. Compressing the updated state adds a new error term.</p>
+    <div class="recurrence-setup" tabindex="0" role="region" aria-label="State update and error propagation equations; scroll horizontally on small screens">
+      <p><span>Full state</span><span class="math-expression"><i>S</i><sub>t</sub> = <i>M</i><sub>t</sub><i>S</i><sub>t−1</sub> + <i>B</i><sub>t</sub></span></p>
+      <p><span>Compressed state</span><span class="math-expression"><i>S̃</i><sub>t</sub> = <i>Q</i>(<i>M</i><sub>t</sub><i>S̃</i><sub>t−1</sub> + <i>B</i><sub>t</sub>)</span></p>
+      <p><span>Error propagation</span><span class="math-expression"><i>E</i><sub>t</sub> = <span class="inherited-error"><i>M</i><sub>t</sub><i>E</i><sub>t−1</sub></span> + <span class="new-error"><i>ε</i><sub>t</sub></span></span></p>
+    </div>
+    <p class="equation-definitions"><i>E</i><sub>t</sub> = <i>S̃</i><sub>t</sub> − <i>S</i><sub>t</sub>. <i>M</i><sub>t</sub> is the state transition, <i>B</i><sub>t</sub> the new update, <i>Q</i> state compression, and <i>ε</i><sub>t</sub> the new compression error. This comparison holds the input sequence and update terms fixed to isolate direct state-compression error.</p>
+    <div class="error-timeline-scroll" tabindex="0" role="region" aria-label="State error timeline; scroll horizontally on small screens">
+      <svg class="error-timeline" viewBox="0 0 960 264" role="img" aria-labelledby="error-timeline-title error-timeline-desc">
+        <title id="error-timeline-title">An early compression error survives subsequent state updates</title>
+        <desc id="error-timeline-desc">From left to right, four states are read to produce output vectors and updated along the decoding timeline. Starting with zero state error, the error terms become epsilon one, then M two times epsilon one plus epsilon two, then M three times M two times epsilon one plus M three times epsilon two plus epsilon three. Colored bands distinguish propagated error terms from newly introduced compression errors.</desc>
+        <defs>
+          <pattern id="error-state-grid" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#eef2f4"/><path d="M 14 0 H 0 V 14" fill="none" stroke="#fff" stroke-width="1"/></pattern>
+          <marker id="error-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#87939c"/></marker>
+        </defs>
+        <g>
+<text x="120" y="22" text-anchor="middle" class="timeline-output-label">Output</text>
+<rect x="115" y="31" width="10" height="25" rx="2" fill="#c6dcd1" stroke="#7b9c8c"/>
+<path d="M 120 84 V 61" class="timeline-arrow" marker-end="url(#error-arrow)"/>
+<text x="134" y="76" class="timeline-small">read</text>
+<rect x="64" y="91" width="112" height="68" rx="5" fill="url(#error-state-grid)" stroke="#b4bfc6"/>
 
-  <section class="paper-section" aria-labelledby="sketchssm-results">
-    <h2 id="sketchssm-results">Highlights</h2>
-    <p>
-      Across Mamba-2-, GDN-, and KDA-based models, SketchSSM reduces state-access traffic by approximately 10× while largely
-      preserving accuracy. On an NVIDIA B300, it achieves up to 7.78× linear-attention kernel speedup and up to 2.64× higher
-      decode throughput on Nemotron 3 Super.
-    </p>
-  </section>
-</div>
+<text x="120" y="117" text-anchor="middle" class="timeline-state-label">S₀</text>
+<text x="120" y="184" text-anchor="middle" class="timeline-error-label">No error</text>
+<path d="M 120 212 V 219" stroke="#9ca7af"/>
+<text x="120" y="238" text-anchor="middle" class="timeline-small">t = 0</text>
+<path d="M 184 128 H 293" class="timeline-arrow" marker-end="url(#error-arrow)"/><text x="240" y="109" text-anchor="middle" class="timeline-small">update + compress</text><text x="240" y="149" text-anchor="middle" class="timeline-new-error">+ ε₁</text>
+</g>
+<g>
+<text x="360" y="22" text-anchor="middle" class="timeline-output-label">Output</text>
+<rect x="355" y="31" width="10" height="25" rx="2" fill="#c6dcd1" stroke="#7b9c8c"/>
+<path d="M 360 84 V 61" class="timeline-arrow" marker-end="url(#error-arrow)"/>
+<text x="374" y="76" class="timeline-small">read</text>
+<rect x="304" y="91" width="112" height="68" rx="5" fill="url(#error-state-grid)" stroke="#b4bfc6"/>
+<rect x="305" y="146" width="110" height="12" fill="#c46658"/>
+<text x="360" y="117" text-anchor="middle" class="timeline-state-label">S̃₁</text>
+<text x="360" y="184" text-anchor="middle" class="timeline-error-label">ε₁</text>
+<path d="M 360 212 V 219" stroke="#9ca7af"/>
+<text x="360" y="238" text-anchor="middle" class="timeline-small">t = 1</text>
+<path d="M 424 128 H 533" class="timeline-arrow" marker-end="url(#error-arrow)"/><text x="480" y="109" text-anchor="middle" class="timeline-small">update + compress</text><text x="480" y="149" text-anchor="middle" class="timeline-new-error">+ ε₂</text>
+</g>
+<g>
+<text x="600" y="22" text-anchor="middle" class="timeline-output-label">Output</text>
+<rect x="595" y="31" width="10" height="25" rx="2" fill="#c6dcd1" stroke="#7b9c8c"/>
+<path d="M 600 84 V 61" class="timeline-arrow" marker-end="url(#error-arrow)"/>
+<text x="614" y="76" class="timeline-small">read</text>
+<rect x="544" y="91" width="112" height="68" rx="5" fill="url(#error-state-grid)" stroke="#b4bfc6"/>
+<rect x="545" y="146" width="110" height="12" fill="#c46658"/><rect x="545" y="134" width="110" height="12" fill="#df9a86"/>
+<text x="600" y="117" text-anchor="middle" class="timeline-state-label">S̃₂</text>
+<text x="600" y="184" text-anchor="middle" class="timeline-error-label">M₂ε₁ + ε₂</text>
+<path d="M 600 212 V 219" stroke="#9ca7af"/>
+<text x="600" y="238" text-anchor="middle" class="timeline-small">t = 2</text>
+<path d="M 664 128 H 773" class="timeline-arrow" marker-end="url(#error-arrow)"/><text x="720" y="109" text-anchor="middle" class="timeline-small">update + compress</text><text x="720" y="149" text-anchor="middle" class="timeline-new-error">+ ε₃</text>
+</g>
+<g>
+<text x="840" y="22" text-anchor="middle" class="timeline-output-label">Output</text>
+<rect x="835" y="31" width="10" height="25" rx="2" fill="#c6dcd1" stroke="#7b9c8c"/>
+<path d="M 840 84 V 61" class="timeline-arrow" marker-end="url(#error-arrow)"/>
+<text x="854" y="76" class="timeline-small">read</text>
+<rect x="784" y="91" width="112" height="68" rx="5" fill="url(#error-state-grid)" stroke="#b4bfc6"/>
+<rect x="785" y="146" width="110" height="12" fill="#c46658"/><rect x="785" y="134" width="110" height="12" fill="#df9a86"/><rect x="785" y="122" width="110" height="12" fill="#efc2af"/>
+<text x="840" y="117" text-anchor="middle" class="timeline-state-label">S̃₃</text>
+<text x="840" y="184" text-anchor="middle" class="timeline-error-label">M₃M₂ε₁ + M₃ε₂ + ε₃</text>
+<path d="M 840 212 V 219" stroke="#9ca7af"/>
+<text x="840" y="238" text-anchor="middle" class="timeline-small">t = 3</text>
+
+</g>
+        <path d="M 64 216 H 919" class="timeline-arrow" marker-end="url(#error-arrow)"/>
+        <text x="918" y="257" text-anchor="end" class="timeline-small">Decode time →</text>
+      </svg>
+    </div>
+  </figure>
+  <div class="state-access-summary">
+    <p><strong>State-write access:</strong> Already amortized across multiple decoding steps by ReplaySSM, making full-state updates affordable while avoiding state-compression error propagation.</p>
+    <p><strong>State-read access:</strong> Reduced by reading from a compact sketch refreshed alongside each full-state update.</p>
+  </div>
+  <div class="method-grid">
+    <article class="method-card write-card"><p class="step-label">Once per window · Flush</p><h3>Write to the full state</h3>
+      <div class="state-illustration" role="img" aria-label="Key and value vector pairs accumulate in a buffer, then update the full state at a flush step.">
+        <div class="kv-buffer" aria-hidden="true">
+          <div class="kv-headings"><span>Keys <i>k</i></span><span>Values <i>v</i></span></div>
+          <div class="kv-stack">
+            <div class="kv-pair"><span class="key-vector"></span><span class="value-vector"></span></div>
+            <div class="kv-pair"><span class="key-vector"></span><span class="value-vector"></span></div>
+            <div class="kv-ellipsis"><span>⋮</span><span>⋮</span></div>
+            <div class="kv-pair"><span class="key-vector"></span><span class="value-vector"></span></div>
+          </div>
+          <span class="buffer-caption">KV buffer</span>
+        </div>
+        <span class="flow-arrow" aria-hidden="true">→</span><span class="matrix-block" aria-hidden="true">Full state<br><i>S₀</i></span>
+      </div>
+      <p>Apply buffered updates to the uncompressed state, then refresh a compact sketch. The state is never replaced with its approximation.</p><p class="method-note">Avoid propagating state-compression errors.<sup>*</sup></p>
+    </article>
+    <article class="method-card read-card"><p class="step-label">Between flushes · Non-flush</p><h3>Read from a small sketch</h3>
+      <div class="state-illustration read-illustration" role="img" aria-label="The sketch matrix U multiplied by the small query coefficient vector c sub t produces the state-readout output vector.">
+        <div class="read-operand" aria-hidden="true"><span class="sketch-block"><i>U</i></span><span class="operand-label">Sketch</span></div>
+        <span class="flow-arrow" aria-hidden="true">×</span>
+        <div class="read-operand" aria-hidden="true"><span class="vector-shape coefficient-vector"></span><span class="operand-label">Query coeff.<br><i>cₜ</i></span></div>
+        <span class="flow-arrow" aria-hidden="true">→</span>
+        <div class="read-operand" aria-hidden="true"><span class="vector-shape output-vector"></span><span class="operand-label">Output<br>vector</span></div>
+      </div>
+      <p>Combine sketch vectors with query-dependent coefficients to approximate the state readout. Recent buffered updates contribute separately to the output.</p><p class="method-note">No full-state access between flush steps.</p>
+    </article>
+  </div>
+  <p class="method-bottom-line"><sup>*</sup> Readout approximation errors can still propagate through output vectors and affect subsequent full-state updates. Here, <strong>avoiding error propagation</strong> refers specifically to preventing the accumulation of errors from information discarded by state compression during ring-buffered state updates.</p>
+  <figure class="research-figure">
+    <a href="{{ '/assets/projects/sketchssm/sketchssm-overview.png' | relative_url }}" target="_blank" rel="noopener" aria-label="Open the execution diagram at full size"><img src="{{ '/assets/projects/sketchssm/sketchssm-overview.png' | relative_url }}" alt="Flush steps update the full state and refresh the sketch. Non-flush steps read the sketch and coefficient map while leaving the full state untouched." loading="lazy" width="3521" height="1005"></a>
+    <figcaption>One full-state update every W steps; compact-sketch reads in between. The sketching basis is calibrated offline, while the sketch and coefficient map are refreshed at each flush.</figcaption>
+  </figure>
+</section>
+
+<section class="paper-section sketch-construction" id="sketch" aria-labelledby="sketch-title">
+  <div class="section-heading"><p class="eyebrow">02 / How to Make a Sketch</p><h2 id="sketch-title">Preserve the output.<br>Build a compact query basis.</h2></div>
+  <p class="section-lead">Within each window, the full state stays fixed, but the effective query changes at every decoding step. Computing each query's output directly therefore requires rereading the same full state.</p>
+  <p class="section-lead">Our idea is to approximate these changing queries with a <strong>small, fixed query basis</strong>. A single full-state read at the flush step precomputes the outputs for all basis vectors, forming a compact sketch. Subsequent queries combine these precomputed outputs instead of rereading the full state.</p>
+  <figure class="query-basis-figure" aria-label="Changing queries share a fixed basis whose state-read outputs are precomputed as a sketch">
+    <div class="basis-diagram-grid">
+      <div class="basis-diagram-panel">
+        <h3>Different queries. One fixed basis.</h3>
+        <svg viewBox="0 0 340 270" role="img" aria-labelledby="query-space-title query-space-desc">
+          <title id="query-space-title">Queries at different decode steps represented in a fixed three-basis subspace</title>
+          <desc id="query-space-desc">Three colored axes are the offline-calibrated basis vectors omega one, omega two, and omega three. Gray query vectors at different decode steps use different coefficients in this same fixed basis. The three-dimensional view is schematic, not an ordinary Euclidean projection.</desc>
+          <defs><marker id="query-axis-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/></marker></defs>
+          <path d="M 140 201 L 252 214 L 182 249 L 70 236 Z" fill="#f0f5f3"/>
+          <path d="M 140 71 L 252 84 L 182 119 L 70 106 Z M 252 84 V 214 M 182 119 V 249 M 70 106 V 236" fill="none" stroke="#e0e7e5" stroke-dasharray="4 5"/>
+          <path d="M 140 201 L 252 214" stroke="#d38b34" stroke-width="2.5" marker-end="url(#query-axis-arrow)"/>
+          <path d="M 140 201 L 70 236" stroke="#4e8db5" stroke-width="2.5" marker-end="url(#query-axis-arrow)"/>
+          <path d="M 140 201 V 71" stroke="#43856d" stroke-width="2.5" marker-end="url(#query-axis-arrow)"/>
+          <text x="265" y="222" fill="#d38b34" class="basis-axis-label">ω₁</text>
+          <text x="43" y="250" fill="#4e8db5" class="basis-axis-label">ω₂</text>
+          <text x="130" y="55" fill="#43856d" class="basis-axis-label">ω₃</text>
+          <path d="M 140 201 L 192 113 M 140 201 L 110 156 M 140 201 L 212 169" stroke="#7c8794" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <circle cx="192" cy="113" r="5" fill="#536475"/><circle cx="110" cy="156" r="5" fill="#536475"/><circle cx="212" cy="169" r="5" fill="#536475"/>
+          <text x="204" y="108" class="basis-svg-query">q̃₁</text><text x="81" y="148" class="basis-svg-query">q̃₂</text><text x="226" y="168" class="basis-svg-query">q̃₃</text>
+          <circle cx="140" cy="201" r="3" fill="#536475"/>
+          <text x="18" y="22" class="basis-svg-note">New query at each decode step</text>
+        </svg>
+        <div class="basis-equation basis-query-equation" tabindex="0" role="region" aria-label="The effective query is approximated by q tilde hat, a linear combination of the fixed basis vectors"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mover accent="true"><mi>q</mi><mo>~</mo></mover><mrow><mi>t</mi></mrow></msub><mo>≈</mo><msub><mover accent="true"><mover accent="true"><mi>q</mi><mo>~</mo></mover><mo>^</mo></mover><mrow><mi>t</mi></mrow></msub><mo>=</mo><msub><mi>c</mi><mrow><mi>t</mi><mo>,</mo><mn>1</mn></mrow></msub><mstyle mathcolor="#ab6a22"><msub><mi>ω</mi><mrow><mn>1</mn></mrow></msub></mstyle><mo>+</mo><msub><mi>c</mi><mrow><mi>t</mi><mo>,</mo><mn>2</mn></mrow></msub><mstyle mathcolor="#356c93"><msub><mi>ω</mi><mrow><mn>2</mn></mrow></msub></mstyle><mo>+</mo><msub><mi>c</mi><mrow><mi>t</mi><mo>,</mo><mn>3</mn></mrow></msub><mstyle mathcolor="#326c56"><msub><mi>ω</mi><mrow><mn>3</mn></mrow></msub></mstyle></mrow></math></div>
+      </div>
+      <div class="basis-diagram-panel">
+        <h3>Precompute the basis outputs.</h3>
+        <svg viewBox="0 0 620 285" role="img" aria-labelledby="basis-cache-title basis-cache-desc">
+          <title id="basis-cache-title">One full-state read produces a much narrower sketch</title>
+          <desc id="basis-cache-desc">The full state transpose is a wide V by K matrix. Multiply it by the fixed K by G basis to produce the compact V by G sketch. State and sketch share the same output dimension V, while the sketch contains far fewer columns. Each sketch column u i equals S zero transpose times omega i.</desc>
+          <defs>
+            <pattern id="basis-state-grid" width="8" height="12" patternUnits="userSpaceOnUse"><rect width="8" height="12" fill="#e6ecef"/><path d="M 8 0 H 0 V 12" fill="none" stroke="#fff"/></pattern>
+            <marker id="basis-store-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#74818d"/></marker>
+          </defs>
+          <text x="310" y="22" text-anchor="middle" class="basis-svg-note">At each flush · One full-state read</text>
+          <text x="178" y="64" text-anchor="middle" class="basis-svg-note">Same full state</text>
+          <rect x="18" y="90" width="320" height="100" rx="5" fill="url(#basis-state-grid)" stroke="#aebbc4"/>
+          <text x="178" y="147" text-anchor="middle" class="basis-axis-label">S₀ᵀ</text>
+          <path d="M 18 201 V 209 H 338 V 201" fill="none" stroke="#98a6b1" stroke-width="1.3"/>
+          <text x="178" y="231" text-anchor="middle" class="basis-svg-note">V × K</text>
+          <text x="359" y="148" text-anchor="middle" class="basis-axis-label">×</text>
+          <text x="405" y="64" text-anchor="middle" class="basis-svg-note">Fixed basis Ω</text>
+          <rect x="393" y="79" width="8" height="122" rx="0" fill="#d38b34" fill-opacity=".25" stroke="#d38b34"/><text x="389" y="219" text-anchor="middle" fill="#d38b34" class="basis-svg-math" style="font-size:14px">ω₁</text>
+          <rect x="401" y="79" width="8" height="122" rx="0" fill="#4e8db5" fill-opacity=".25" stroke="#4e8db5"/><text x="405" y="219" text-anchor="middle" fill="#4e8db5" class="basis-svg-math" style="font-size:14px">ω₂</text>
+          <rect x="409" y="79" width="8" height="122" rx="0" fill="#43856d" fill-opacity=".25" stroke="#43856d"/><text x="421" y="219" text-anchor="middle" fill="#43856d" class="basis-svg-math" style="font-size:14px">ω₃</text>
+          <text x="405" y="241" text-anchor="middle" class="basis-svg-note">K × G</text>
+          <path d="M 440 140 H 484" stroke="#74818d" stroke-width="1.7" marker-end="url(#basis-store-arrow)"/>
+          <text x="526" y="64" text-anchor="middle" class="basis-svg-note">Compact sketch U</text>
+          <rect x="514" y="90" width="8" height="100" rx="0" fill="#d38b34" fill-opacity=".35" stroke="#d38b34"/><path d="M 514 102 h 8 m -8 12 h 8 m -8 12 h 8 m -8 12 h 8 m -8 12 h 8 m -8 12 h 8 m -8 12 h 8" stroke="#fff" stroke-width="1"/><text x="510" y="219" text-anchor="middle" fill="#d38b34" class="basis-svg-math" style="font-size:14px">u₁</text>
+          <rect x="522" y="90" width="8" height="100" rx="0" fill="#4e8db5" fill-opacity=".35" stroke="#4e8db5"/><path d="M 522 102 h 8 m -8 12 h 8 m -8 12 h 8 m -8 12 h 8 m -8 12 h 8 m -8 12 h 8 m -8 12 h 8" stroke="#fff" stroke-width="1"/><text x="526" y="219" text-anchor="middle" fill="#4e8db5" class="basis-svg-math" style="font-size:14px">u₂</text>
+          <rect x="530" y="90" width="8" height="100" rx="0" fill="#43856d" fill-opacity=".35" stroke="#43856d"/><path d="M 530 102 h 8 m -8 12 h 8 m -8 12 h 8 m -8 12 h 8 m -8 12 h 8 m -8 12 h 8 m -8 12 h 8" stroke="#fff" stroke-width="1"/><text x="542" y="219" text-anchor="middle" fill="#43856d" class="basis-svg-math" style="font-size:14px">u₃</text>
+          <text x="526" y="241" text-anchor="middle" class="basis-svg-note">V × G</text>
+          <text x="310" y="275" text-anchor="middle" class="basis-svg-math">uᵢ = S₀ᵀωᵢ</text>
+        </svg>
+        <p class="basis-equation"><i>U</i> = [<span class="basis-color-one"><i>u</i>₁</span>, <span class="basis-color-two"><i>u</i>₂</span>, <span class="basis-color-three"><i>u</i>₃</span>] = <i>S</i><sub>0</sub><sup>⊤</sup>Ω</p>
+      </div>
+    </div>
+    <div class="basis-reuse">
+      <span>Each decode step: change the coefficients, reuse the stored outputs. <strong>No full-state reads needed.</strong></span>
+      <div class="basis-output-derivation" tabindex="0" role="region" aria-label="The approximate state output equals the full state transpose times the approximated query, which equals a weighted sum of precomputed sketch columns, U times c sub t">
+        <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mi>o</mi><mi>t</mi><mtext>state</mtext></msubsup><mo>≈</mo><msubsup><mover accent="true"><mi>o</mi><mo>^</mo></mover><mi>t</mi><mtext>state</mtext></msubsup><mo>=</mo><msup><msub><mi>S</mi><mrow><mn>0</mn></mrow></msub><mrow><mo>⊤</mo></mrow></msup><msub><mover accent="true"><mover accent="true"><mi>q</mi><mo>~</mo></mover><mo>^</mo></mover><mrow><mi>t</mi></mrow></msub><mo>=</mo><msup><msub><mi>S</mi><mrow><mn>0</mn></mrow></msub><mrow><mo>⊤</mo></mrow></msup><mrow><mo stretchy="false">(</mo><msub><mi>c</mi><mrow><mi>t</mi><mo>,</mo><mn>1</mn></mrow></msub><mstyle mathcolor="#ab6a22"><msub><mi>ω</mi><mrow><mn>1</mn></mrow></msub></mstyle><mo>+</mo><msub><mi>c</mi><mrow><mi>t</mi><mo>,</mo><mn>2</mn></mrow></msub><mstyle mathcolor="#356c93"><msub><mi>ω</mi><mrow><mn>2</mn></mrow></msub></mstyle><mo>+</mo><msub><mi>c</mi><mrow><mi>t</mi><mo>,</mo><mn>3</mn></mrow></msub><mstyle mathcolor="#326c56"><msub><mi>ω</mi><mrow><mn>3</mn></mrow></msub></mstyle><mo stretchy="false">)</mo></mrow></mrow></math>
+        <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo>=</mo><msub><mi>c</mi><mrow><mi>t</mi><mo>,</mo><mn>1</mn></mrow></msub><mstyle mathcolor="#ab6a22"><msub><mi>u</mi><mrow><mn>1</mn></mrow></msub></mstyle><mo>+</mo><msub><mi>c</mi><mrow><mi>t</mi><mo>,</mo><mn>2</mn></mrow></msub><mstyle mathcolor="#356c93"><msub><mi>u</mi><mrow><mn>2</mn></mrow></msub></mstyle><mo>+</mo><msub><mi>c</mi><mrow><mi>t</mi><mo>,</mo><mn>3</mn></mrow></msub><mstyle mathcolor="#326c56"><msub><mi>u</mi><mrow><mn>3</mn></mrow></msub></mstyle><mo>=</mo><mi>U</mi><msub><mi>c</mi><mrow><mi>t</mi></mrow></msub></mrow></math>
+      </div>
+    </div>
+  </figure>
+  <div class="sketch-objective">
+    <p>To choose a basis that preserves the output, we minimize output reconstruction error—equivalently, <strong>state-weighted query approximation error</strong>.</p>
+    <div class="sketch-math" tabindex="0" role="region" aria-label="Output error equals state-weighted query approximation error"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mi>ℰ</mi><mrow><mi>t</mi></mrow></msub><mo>=</mo><msubsup><mrow><mo>∥</mo><msup><msub><mi>S</mi><mrow><mn>0</mn></mrow></msub><mrow><mo>⊤</mo></mrow></msup><msub><mover><mi>q</mi><mo>~</mo></mover><mrow><mi>t</mi></mrow></msub><mo>−</mo><mi>U</mi><msub><mi>c</mi><mrow><mi>t</mi></mrow></msub><mo>∥</mo></mrow><mn>2</mn><mn>2</mn></msubsup><mo>=</mo><msubsup><mrow><mo>∥</mo><msup><mi>H</mi><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup><mo stretchy="false">(</mo><msub><mover><mi>q</mi><mo>~</mo></mover><mrow><mi>t</mi></mrow></msub><mo>−</mo><mi>Ω</mi><msub><mi>c</mi><mrow><mi>t</mi></mrow></msub><mo stretchy="false">)</mo><mo>∥</mo></mrow><mn>2</mn><mn>2</mn></msubsup></mrow></math></div>
+    <p class="sketch-formula-note"><i>H</i> = <i>S</i><sub>0</sub><i>S</i><sub>0</sub><sup>⊤</sup>; <i>S</i><sub>0</sub> is the full state at the window boundary, and <i>q̃</i><sub>t</sub> is the effective query incorporating within-window transitions.</p>
+  </div>
+  <div class="sketch-recipe">
+    <article class="sketch-recipe-row">
+      <div class="recipe-label"><p class="step-label">Offline · Fixed</p><h3>Sketching matrix</h3></div>
+      <div class="recipe-content">
+        <div class="sketch-math" tabindex="0" role="region" aria-label="Offline state-weighted query approximation loss"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mi>ℒ</mi><mrow><mi>G</mi></mrow></msub><mo stretchy="false">(</mo><mi>Ω</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>𝔼</mi><mrow><mi>𝒟</mi></mrow></msub><mo>[</mo><munder><mo>min</mo><mi>c</mi></munder><msubsup><mrow><mo>∥</mo><msup><msub><mi>E</mi><mrow><mn>0</mn></mrow></msub><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup><mo stretchy="false">(</mo><msub><mover><mi>q</mi><mo>~</mo></mover><mrow><mi>t</mi></mrow></msub><mo>−</mo><mi>Ω</mi><mi>c</mi><mo stretchy="false">)</mo><mo>∥</mo></mrow><mn>2</mn><mn>2</mn></msubsup><mo>]</mo></mrow></math></div>
+        <div class="sketch-math" tabindex="0" role="region" aria-label="Optimal sketching matrix: Omega star equals E zero to the negative one-half times P G"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mi>Ω</mi><mrow><mo>⋆</mo></mrow></msup><mo>=</mo><msup><msub><mi>E</mi><mrow><mn>0</mn></mrow></msub><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup><msub><mi>P</mi><mrow><mi>G</mi></mrow></msub></mrow></math></div>
+        <p>Use the average state geometry <i>E</i><sub>0</sub> = 𝔼<sub>𝒟</sub>[<i>S</i><sub>0</sub><i>S</i><sub>0</sub><sup>⊤</sup>]. Uncentered PCA of <i>z</i><sub>t</sub> = <i>E</i><sub>0</sub><sup>1/2</sup><i>q̃</i><sub>t</sub> gives <i>P</i><sub>G</sub>, the top <i>G</i> eigenvectors of 𝔼<sub>𝒟</sub>[<i>z</i><sub>t</sub><i>z</i><sub>t</sub><sup>⊤</sup>]. Calibrate once per state head; keep the basis fixed during inference.</p>
+      </div>
+    </article>
+    <article class="sketch-recipe-row">
+      <div class="recipe-label"><p class="step-label">Per window · Flush</p><h3>Sketch &amp; coefficient map</h3></div>
+      <div class="recipe-content">
+        <div class="sketch-math" tabindex="0" role="region" aria-label="Sketch U equals full state transpose times the fixed sketching matrix"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>U</mi><mo>=</mo><msup><msub><mi>S</mi><mrow><mn>0</mn></mrow></msub><mrow><mo>⊤</mo></mrow></msup><msup><mi>Ω</mi><mrow><mo>⋆</mo></mrow></msup></mrow></math></div>
+        <div class="sketch-math" tabindex="0" role="region" aria-label="Output-optimal coefficient map C equals the pseudoinverse of U transpose U times U transpose times S zero transpose"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>C</mi><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>U</mi><mrow><mo>⊤</mo></mrow></msup><mi>U</mi><mo stretchy="false">)</mo></mrow><mrow><mo>†</mo></mrow></msup><msup><mi>U</mi><mrow><mo>⊤</mo></mrow></msup><msup><msub><mi>S</mi><mrow><mn>0</mn></mrow></msub><mrow><mo>⊤</mo></mrow></msup></mrow></math></div>
+        <p>Refresh <i>U</i> and the state-dependent map <i>C</i> with each full-state update. Sketch construction is fused into the update kernel. Here, † denotes the pseudoinverse; the implementation uses an efficient approximation of <i>C</i>.</p>
+      </div>
+    </article>
+    <article class="sketch-recipe-row">
+      <div class="recipe-label"><p class="step-label">Per step · Non-flush</p><h3>Coefficient vector &amp; readout</h3></div>
+      <div class="recipe-content">
+        <div class="sketch-math" tabindex="0" role="region" aria-label="Coefficient vector c sub t equals C times the effective query; the approximate state readout equals U times c sub t"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mi>c</mi><mrow><mi>t</mi></mrow></msub><mo>=</mo><mi>C</mi><msub><mover><mi>q</mi><mo>~</mo></mover><mrow><mi>t</mi></mrow></msub><mo>,</mo><mspace width="1.2em"/><msubsup><mover><mi>o</mi><mo>^</mo></mover><mi>t</mi><mtext>state</mtext></msubsup><mo>=</mo><mi>U</mi><msub><mi>c</mi><mrow><mi>t</mi></mrow></msub></mrow></math></div>
+        <p>Choose query-dependent coefficients that minimize ∥<i>S</i><sub>0</sub><sup>⊤</sup><i>q̃</i><sub>t</sub> − <i>Uc</i>∥<sub>2</sub><sup>2</sup>, then combine the sketch vectors. Read only the compact sketch and map; the buffered contribution to the output remains exact.</p>
+      </div>
+    </article>
+  </div>
+  <p class="sketch-paper-link"><a href="https://arxiv.org/abs/2609.33051" target="_blank" rel="noopener">See the paper for derivations and implementation details ↗</a></p>
+</section>
+
+<section class="paper-section" id="accuracy" aria-labelledby="accuracy-title">
+  <div class="section-heading"><p class="eyebrow">03 / Accuracy</p><h2 id="accuracy-title">About 10× less state traffic.<br>Accuracy largely preserved.</h2></div>
+  <p class="section-lead">Across four models spanning Mamba-2, Gated DeltaNet, and KDA, SketchSSM largely preserves average accuracy across four benchmarks while reducing state-access traffic by approximately 10×.</p>
+  <div class="figure-guide"><span class="green-key" aria-hidden="true"></span><p><strong>Follow the green curves.</strong> Moving right means less state traffic; staying high means better accuracy. Pruning and quantization lose accuracy at smaller traffic reductions because errors introduced by state compression propagate across decoding steps.</p></div>
+  <figure class="research-figure">
+    <a href="{{ '/assets/projects/sketchssm/sketchssm-accuracy.png' | relative_url }}" target="_blank" rel="noopener" aria-label="Open the accuracy graph at full size"><img src="{{ '/assets/projects/sketchssm/sketchssm-accuracy.png' | relative_url }}" alt="Accuracy and generation length versus state-access traffic reduction for four models on MATH-500, AIME25, GPQA Diamond, and LiveCodeBench. Green SketchSSM curves maintain accuracy farther to the right than pruning or quantization." loading="lazy" width="1045" height="703"></a>
+    <figcaption>Paper, Figure 5. Accuracy and verbosity versus state access traffic reduction relative to Standard as detailed in the paper’s appendix, “State Memory Traffic Reduction.” ReplaySSM and SketchSSM use <i>W</i> = 16. DSQ uses {10, 8, 6, 4}-bit states; GHOST (Nano/Super/GLM) and DRRQR (Qwen) prune {37.5, 50, 62.5, 75}% of the state. SketchSSM uses <i>Ḡ</i> ∈ {21, 10, 6, 4, 2}, {20, 9, 5, 3, 2}, {26, 11, 7, 4, 3}, and {28, 12, 7, 4, 3} for Nano, Super, Qwen, and GLM, respectively. SketchSSM largely preserves average accuracy across the four benchmarks at reductions up to approximately 10×, whereas pruning and quantization degrade accuracy at smaller reductions. Verbosity is the mean generation length normalized to Standard. Raw accuracy results are provided in the paper’s appendix, “Accuracy Results on Decode Benchmarks.” <a href="{{ '/assets/projects/sketchssm/sketchssm-accuracy.png' | relative_url }}" target="_blank" rel="noopener">View full-size figure ↗</a></figcaption>
+  </figure>
+  <p class="section-note">Sketch rank controls the accuracy–traffic trade-off. Larger traffic reductions can decrease accuracy.</p>
+</section>
+
+<section class="paper-section" id="speed" aria-labelledby="speed-title">
+  <div class="section-heading"><p class="eyebrow">04 / Linear-attention kernel speedup</p><h2 id="speed-title">Smaller state-access,<br>Faster Linear Attention</h2></div>
+  <p class="section-lead">Most steps read only the sketch, not the full state, to reduce memory traffic.</p>
+  <p class="section-lead">At a flush step, SketchSSM refreshes the sketch by fusing the sketch construction computation into the existing state update kernel.</p>
+  <div class="kernel-stats" aria-label="Whole-window speedups over Standard at batch 512">
+    <div><strong>7.78×</strong><h3>Mamba-2</h3><p>Nemotron 3 Super</p></div><div><strong>5.22×</strong><h3>Gated DeltaNet</h3><p>Qwen3.8 Flash-Next</p></div><div><strong>5.20×</strong><h3>KDA</h3><p>GLM 5.3 Flash</p></div>
+  </div>
+  <p class="measurement-note">Whole-window kernel speedups · 1× NVIDIA B300 · W = 16 · Batch 512</p>
+  <figure class="research-figure">
+    <a href="{{ '/assets/projects/sketchssm/sketchssm-latency.png' | relative_url }}" target="_blank" rel="noopener" aria-label="Open the kernel latency figure at full size"><img src="{{ '/assets/projects/sketchssm/sketchssm-latency.png' | relative_url }}" alt="Linear-attention latency on NVIDIA B300. Columns compare non-flush steps, flush steps, and total windows for batch sizes 128, 256, and 512. Total window speedups reach 7.78, 5.22, and 5.20 times across Mamba-2, GDN, and KDA." loading="lazy" width="1919" height="1076"></a>
+    <figcaption>Paper, Figure 7. Lower is better. The rightmost column includes every step in a window, including sketch construction at the flush. Numbers under SketchSSM bars denote mean sketch rank. <a href="{{ '/assets/projects/sketchssm/sketchssm-latency.png' | relative_url }}" target="_blank" rel="noopener">View full-size figure ↗</a></figcaption>
+  </figure>
+  <p class="throughput-note">In the paper’s end-to-end evaluation, these kernel improvements translate to <strong>up to 2.64× higher decode throughput</strong> on Nemotron 3 Super with one NVIDIA B300.</p>
+</section>
+
+<section class="paper-section start-section" id="resources" aria-labelledby="resources-title">
+  <div class="start-intro"><p class="eyebrow">Try SketchSSM</p><h2 id="resources-title">Bring SketchSSM<br>to your serving stack</h2><p>vLLM integration, CUDA kernels, evaluation scripts, and ready-to-use calibration files.</p></div>
+  <div class="resource-block">
+    <h3 class="resource-heading"><a href="https://github.com/SNU-ARC/SketchSSM#installation" target="_blank" rel="noopener"><img class="github-resource-icon" src="{{ '/assets/projects/sketchssm/github-white.png' | relative_url }}" alt="" width="28" height="28">Get started on GitHub <span aria-hidden="true">↗</span></a></h3>
+    <pre class="install-code" tabindex="0" aria-label="SketchSSM installation commands"><code>git clone https://github.com/SNU-ARC/SketchSSM.git
+cd SketchSSM/vllm
+VLLM_USE_PRECOMPILED=1 python -m pip install -e .
+python -m pip install sketchssm   # CUDA kernels; without it vLLM uses its Triton kernels</code></pre>
+  </div>
+  <div class="resource-block">
+    <h3 class="resource-heading"><a href="https://huggingface.co/SketchSSM" target="_blank" rel="noopener"><img src="{{ '/assets/projects/sketchssm/huggingface.webp' | relative_url }}" alt="" width="28" height="28"><span>Calibrated query bases are available. <span aria-hidden="true">↗</span></span></a></h3>
+    <p class="calibration-note">Stay tuned for more models. You can also create your own offline calibration for your model using the <a href="https://github.com/SNU-ARC/SketchSSM/blob/main/sketchssm/calibration/README.md" target="_blank" rel="noopener">SketchSSM code repository</a>.</p>
+    <div class="calibration-models">
+      <a class="calibration-model" href="https://huggingface.co/SketchSSM/GLM-5.3-Flash-NVFP4" target="_blank" rel="noopener"><span class="model-card-content"><small>SketchSSM</small><span>GLM 5.3 Flash</span></span><span class="model-precision">NVFP4</span><span aria-hidden="true">↗</span></a>
+      <a class="calibration-model" href="https://huggingface.co/SketchSSM/Qwen3.8-Flash-Next-NVFP4" target="_blank" rel="noopener"><span class="model-card-content"><small>SketchSSM</small><span>Qwen3.8 Flash-Next</span></span><span class="model-precision">NVFP4</span><span aria-hidden="true">↗</span></a>
+      <a class="calibration-model" href="https://huggingface.co/SketchSSM/Qwen3.5-9B-BF16" target="_blank" rel="noopener"><span class="model-card-content"><small>SketchSSM</small><span>Qwen3.5 9B</span></span><span class="model-precision">BF16</span><span aria-hidden="true">↗</span></a>
+      <a class="calibration-model" href="https://huggingface.co/SketchSSM/Nemotron-3-Super-NVFP4" target="_blank" rel="noopener"><span class="model-card-content"><small>SketchSSM</small><span>Nemotron 3 Super</span></span><span class="model-precision">NVFP4</span><span aria-hidden="true">↗</span></a>
+      <a class="calibration-model" href="https://huggingface.co/SketchSSM/Nemotron-Nano-9B-v2-BF16" target="_blank" rel="noopener"><span class="model-card-content"><small>SketchSSM</small><span>Nemotron Nano 9B v2</span></span><span class="model-precision">BF16</span><span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="paper-section citation-section" id="citation" aria-labelledby="citation-title">
+  <div class="citation-heading"><h2 id="citation-title">Citation</h2><button type="button" id="copy-citation">Copy BibTeX</button></div>
+  <pre><code id="bibtex">@misc{kwon2026sketchssmwritestateread,
+  title={SketchSSM: Write to the Full State, Read from a Compact Sketch},
+  author={Omin Kwon and JoongWon Shin and Minseo Kim and Kurt Keutzer and Sehoon Kim and Jae W. Lee},
+  year={2026},
+  eprint={2609.33051},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2609.33051}
+}</code></pre>
+  <p id="copy-status" role="status" class="copy-status"></p>
+</section>
