@@ -51,6 +51,7 @@ _styles: |
 
   .sketchssm-page .paper-links {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 0.65rem;
     margin: 1.3rem 0 2rem;
@@ -151,8 +152,17 @@ _styles: |
   </div>
 
   <div class="paper-links" aria-label="Paper resources">
+    <a class="paper-link" href="{{ '/project/SketchSSM/' | relative_url }}">
+      <i class="fa-solid fa-house" aria-hidden="true"></i> Project
+    </a>
     <a class="paper-link" href="https://arxiv.org/abs/2609.33051" target="_blank" rel="noopener noreferrer">
       <i class="fa-solid fa-file-lines" aria-hidden="true"></i> Paper
+    </a>
+    <a class="paper-link" href="https://github.com/SNU-ARC/SketchSSM" target="_blank" rel="noopener noreferrer">
+      <i class="fa-brands fa-github" aria-hidden="true"></i> Code
+    </a>
+    <a class="paper-link" href="https://huggingface.co/SketchSSM" target="_blank" rel="noopener noreferrer">
+      <i class="fa-solid fa-database" aria-hidden="true"></i> Data
     </a>
   </div>
 
