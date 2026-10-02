@@ -148,7 +148,7 @@ ninja.data = [{
               window.location.href = "/projects/9_project/";
             },},{id: "projects-sketchssm",
           title: 'SketchSSM',
-          description: "Write to the Full State, Read from a Compact Sketch",
+          description: "Write to the Full State, Read from a Compact Sketch. Faster hybrid-attention decoding without compressing the recurrent state.",
           section: "Projects",handler: () => {
               window.location.href = "/project/SketchSSM/";
             },},{id: "teachings-data-science-fundamentals",
