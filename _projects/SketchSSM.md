@@ -15,17 +15,17 @@ nav: false
     </div>
   </div>
   <div class="authors">
-    <span><a href="{{ '/' | relative_url }}">Omin Kwon</a><sup>1</sup></span>
-    <span>JoongWon Shin<sup>1</sup></span><span><a href="https://minseokim.org/">Minseo Kim</a><sup>2</sup></span><span><a href="https://keutzer.github.io/">Kurt Keutzer</a><sup>2</sup></span>
-    <span><a href="https://sehoonkim.org/">Sehoon Kim</a><sup>3</sup><sup class="corresponding-mark" role="img" aria-label="Co-corresponding author">◆</sup></span>
-    <span><a href="https://iamjaelee.github.io/www/">Jae W. Lee</a><sup>1</sup><sup class="corresponding-mark" role="img" aria-label="Co-corresponding author">◆</sup></span>
+    <span data-affiliation="snu"><a href="{{ '/' | relative_url }}">Omin Kwon</a><sup>1</sup></span>
+    <span data-affiliation="snu">JoongWon Shin<sup>1</sup></span><span data-affiliation="berkeley"><a href="https://minseokim.org/">Minseo Kim</a><sup>2</sup></span><span data-affiliation="berkeley"><a href="https://keutzer.github.io/">Kurt Keutzer</a><sup>2</sup></span>
+    <span data-affiliation="kaist"><a href="https://sehoonkim.org/">Sehoon Kim</a><sup>3</sup><sup class="corresponding-mark" role="img" aria-label="Co-corresponding author">◆</sup></span>
+    <span data-affiliation="snu"><a href="https://iamjaelee.github.io/www/">Jae W. Lee</a><sup>1</sup><sup class="corresponding-mark" role="img" aria-label="Co-corresponding author">◆</sup></span>
   </div>
-  <p class="affiliations"><span><sup>1</sup>Seoul National University</span><span><sup>2</sup>UC Berkeley</span><span><sup>3</sup>KAIST</span></p>
+  <p class="affiliations"><span data-affiliation="snu"><sup>1</sup>Seoul National University</span><span data-affiliation="berkeley"><sup>2</sup>UC Berkeley</span><span data-affiliation="kaist"><sup>3</sup>KAIST</span></p>
   <p class="correspondence"><span class="corresponding-mark" aria-hidden="true">◆</span> Co-corresponding authors</p>
   <div class="affiliation-logos" aria-label="Affiliated institutions">
-    <a href="https://en.snu.ac.kr/" aria-label="Seoul National University"><img class="snu-mark" src="{{ '/assets/projects/sketchssm/snu.svg' | relative_url }}" alt="Seoul National University"></a>
-    <a href="https://www.berkeley.edu/" aria-label="University of California, Berkeley"><img class="berkeley-mark" src="{{ '/assets/projects/sketchssm/berkeley.svg' | relative_url }}" alt="UC Berkeley"></a>
-    <a href="https://www.kaist.ac.kr/en/" class="kaist-mark" aria-label="KAIST"><img src="{{ '/assets/projects/sketchssm/kaist.gif' | relative_url }}" alt="KAIST"></a>
+    <a data-affiliation="snu" href="https://en.snu.ac.kr/" aria-label="Seoul National University"><img class="snu-mark" src="{{ '/assets/projects/sketchssm/snu.svg' | relative_url }}" alt="Seoul National University"></a>
+    <a data-affiliation="berkeley" href="https://www.berkeley.edu/" aria-label="University of California, Berkeley"><img class="berkeley-mark" src="{{ '/assets/projects/sketchssm/berkeley.svg' | relative_url }}" alt="UC Berkeley"></a>
+    <a data-affiliation="kaist" href="https://www.kaist.ac.kr/en/" class="kaist-mark" aria-label="KAIST"><img src="{{ '/assets/projects/sketchssm/kaist.gif' | relative_url }}" alt="KAIST"></a>
   </div>
   <nav class="resource-links" aria-label="Project resources">
     <a href="https://arxiv.org/abs/2609.33051"><i class="ai ai-arxiv" aria-hidden="true"></i>Paper</a>

@@ -1,3 +1,39 @@
+// Link institution marks to their authors without changing the logo links.
+const projectHero = document.querySelector(".project-hero");
+if (projectHero) {
+  const affiliationItems = projectHero.querySelectorAll("[data-affiliation]");
+  let hoveredAffiliation = null;
+  let focusedAffiliation = null;
+  const highlightAffiliation = () => {
+    const active = hoveredAffiliation || focusedAffiliation;
+    projectHero.classList.toggle("affiliation-active", Boolean(active));
+    affiliationItems.forEach((item) => {
+      item.classList.toggle("is-highlighted", Boolean(active) && item.dataset.affiliation === active);
+    });
+  };
+  projectHero.querySelectorAll(".affiliation-logos a[data-affiliation]").forEach((logo) => {
+    logo.addEventListener("pointerenter", (event) => {
+      if (event.pointerType === "touch") return;
+      hoveredAffiliation = logo.dataset.affiliation;
+      highlightAffiliation();
+    });
+    logo.addEventListener("pointerleave", () => {
+      hoveredAffiliation = null;
+      highlightAffiliation();
+    });
+    logo.addEventListener("focus", () => {
+      if (logo.matches(":focus-visible")) {
+        focusedAffiliation = logo.dataset.affiliation;
+        highlightAffiliation();
+      }
+    });
+    logo.addEventListener("blur", () => {
+      focusedAffiliation = null;
+      highlightAffiliation();
+    });
+  });
+}
+
 // Start the muted demo only while it is visible. Keep native controls and
 // respect manual pauses, reduced-motion preferences, and autoplay restrictions.
 const demoVideo = document.querySelector(".demo-figure video");

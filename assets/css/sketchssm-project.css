@@ -212,6 +212,21 @@ sup {
 .correspondence .corresponding-mark {
   margin-right: 4px;
 }
+.project-hero [data-affiliation] {
+  transition:
+    opacity 180ms ease,
+    color 180ms ease;
+}
+.project-hero.affiliation-active [data-affiliation] {
+  opacity: 0.35;
+}
+.project-hero.affiliation-active [data-affiliation].is-highlighted {
+  opacity: 1;
+  color: var(--accent);
+}
+.authors .is-highlighted a {
+  color: inherit;
+}
 .resource-links {
   display: flex;
   justify-content: center;
@@ -1257,6 +1272,9 @@ code {
   }
 }
 @media (prefers-reduced-motion: reduce) {
+  .project-hero [data-affiliation] {
+    transition: none;
+  }
   html {
     scroll-behavior: auto;
   }
