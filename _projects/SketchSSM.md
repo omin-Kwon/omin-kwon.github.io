@@ -38,11 +38,11 @@ nav: false
 <section class="demo-section" id="demo" aria-labelledby="demo-title">
   <div class="section-heading"><h2 id="demo-title">Same model. Less memory traffic. Faster decoding.</h2></div>
   <figure class="demo-figure">
-    <video controls playsinline muted preload="metadata" poster="{{ '/assets/projects/sketchssm/demo-poster.png' | relative_url }}" aria-label="Decode comparison: Standard, ReplaySSM, and SketchSSM" aria-describedby="demo-caption">
-      <source src="{{ '/assets/projects/sketchssm/sketchssm-demo.mp4' | relative_url }}" type="video/mp4">
-      <a href="{{ '/assets/projects/sketchssm/sketchssm-demo.mp4' | relative_url }}">Download the decode demonstration.</a>
+    <video controls autoplay loop playsinline muted preload="auto" poster="{{ '/assets/projects/sketchssm/sketchssm-overview-poster.jpg' | relative_url }}" aria-label="SketchSSM overview: decode comparison of Standard, ReplaySSM, and SketchSSM, then the method and results" aria-describedby="demo-caption">
+      <source src="{{ '/assets/projects/sketchssm/sketchssm-overview.mp4' | relative_url }}" type="video/mp4">
+      <a href="{{ '/assets/projects/sketchssm/sketchssm-overview.mp4' | relative_url }}">Download the SketchSSM overview video.</a>
     </video>
-    <figcaption id="demo-caption">Nemotron Nano 9B v2 · 1× RTX PRO 6000 Blackwell · Batch 320<br><span>Decode shown at 8× playback speed. Prefill is computed ahead of time.</span></figcaption>
+    <figcaption id="demo-caption">SketchSSM in two minutes: the decode demo, the bottleneck, the key idea, and the results.<br><span>Demo: Nemotron Nano 9B v2 · 1× RTX PRO 6000 Blackwell · Batch 320, sped up; prefill is computed ahead of time. <a href="{{ '/assets/projects/sketchssm/sketchssm-demo.mp4' | relative_url }}">Watch the full decode demo at 8× playback.</a></span></figcaption>
   </figure>
   <div class="demo-stats" aria-label="Results for the demo configuration">
     <div><strong>7,634<span> tokens/s</span></strong><p>SketchSSM decode throughput</p></div><div><strong>2.26<span>×</span></strong><p>faster than the standard baseline</p></div><div><strong>1.64<span>×</span></strong><p>faster than ReplaySSM</p></div>
