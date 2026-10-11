@@ -30,7 +30,7 @@ design:
     section_titles: rgb(0,0,0)
     links: rgb(0,0,0)
   links:
-    underline: false
+    underline: true
     show_external_link_icon: false
   header:
     alignment: center
@@ -61,7 +61,7 @@ design:
       space_between_items: 0.04cm
   templates:
     education_entry:
-      main_column: "**INSTITUTION**\n*DEGREE* *in* *AREA*\nSUMMARY\nHIGHLIGHTS"
+      main_column: "**INSTITUTION**\n*DEGREE* *DEGREE_CONNECTOR* *AREA*\nSUMMARY\nHIGHLIGHTS"
       degree_column: null
       date_and_location_column: "DATE"
     experience_entry:
@@ -71,4 +71,4 @@ design:
       main_column: "**NAME**\nAWARDER\nSUMMARY\nHIGHLIGHTS"
       date_and_location_column: "DATE\nLOCATION"
     publication_entry:
-      main_column: "**TITLE**\nAUTHORS\nJOURNAL"
+      main_column: "**TITLE**\nAUTHORS\nJOURNAL\nSUMMARY"
