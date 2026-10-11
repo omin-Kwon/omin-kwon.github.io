@@ -47,7 +47,7 @@ design:
     space_above: 0.35cm
     space_below: 0.18cm
   sections:
-    space_between_regular_entries: 0.34cm
+    space_between_regular_entries: 0.25cm
     space_between_text_based_entries: 0.12cm
     show_time_spans_in: []
   entries:
