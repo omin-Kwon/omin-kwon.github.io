@@ -46,11 +46,13 @@
             {% endif %}
 
             {% if entry.url %}
-              {% assign paper_url = entry.url | replace: 'https://', '' | replace: 'http://', '' %}
-              <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
-                Paper Link:
-                <a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">{{ paper_url }}</a>
-              </h6>
+              {% unless entry.summary contains '[Paper](' or entry.summary contains '[Project Page](' %}
+                {% assign paper_url = entry.url | replace: 'https://', '' | replace: 'http://', '' %}
+                <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
+                  Paper Link:
+                  <a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">{{ paper_url }}</a>
+                </h6>
+              {% endunless %}
             {% endif %}
 
             {% if entry.summary %}
@@ -80,11 +82,13 @@
             {% endif %}
 
             {% if entry.url %}
-              {% assign paper_url = entry.url | replace: 'https://', '' | replace: 'http://', '' %}
-              <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
-                Paper Link:
-                <a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">{{ paper_url }}</a>
-              </h6>
+              {% unless entry.summary contains '[Paper](' or entry.summary contains '[Project Page](' %}
+                {% assign paper_url = entry.url | replace: 'https://', '' | replace: 'http://', '' %}
+                <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
+                  Paper Link:
+                  <a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">{{ paper_url }}</a>
+                </h6>
+              {% endunless %}
             {% endif %}
 
             {% if entry.summary %}

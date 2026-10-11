@@ -18,6 +18,7 @@ cv:
         area: Computer Science and Engineering
         studyType: M.S.
         degree: M.S.
+        degree_connector: in
         start_date: 2025-09
         end_date: present
         highlights:
@@ -30,6 +31,7 @@ cv:
         area: "Electrical and Computer Engineering (summa cum laude)"
         studyType: B.S.
         degree: B.S.
+        degree_connector: in
         start_date: 2019-03
         end_date: 2025-08
         highlights:
@@ -38,11 +40,9 @@ cv:
 
       - institution: Hansung Science High School
         location: Seoul, South Korea
-        area: Science
-        degree: H.S.
+        area: Early Graduation
         start_date: 2017-03
         end_date: 2019-03
-        note: Early graduation with academic excellence
 
     Publications:
       - title: "SketchSSM: Write to the Full State, Read from a Compact Sketch"
@@ -51,10 +51,12 @@ cv:
           - JoongWon Shin
           - Minseo Kim
           - Kurt Keutzer
-          - 'Sehoon Kim\*'
-          - 'Jae W. Lee\*'
-        publisher: "Under review"
-        journal: "Under review"
+          - "Sehoon Kim†"
+          - "Jae W. Lee†"
+        publisher: "NeurIPS 2026 LCFM Workshop; extended version under review"
+        journal: "NeurIPS 2026 LCFM Workshop; extended version under review"
+        url: https://omin-kwon.github.io/project/SketchSSM/
+        summary: "[Project Page](https://omin-kwon.github.io/project/SketchSSM/) · † Co-corresponding authors."
         releaseDate: "2026"
 
       - title: "HERALD: High Throughput Block Diffusion LLM Serving via CPU-GPU Cooperative KV Cache Retrieval"
@@ -68,9 +70,10 @@ cv:
         publisher: "Under review"
         journal: "Under review"
         url: https://arxiv.org/abs/2606.21633
+        summary: "[Paper](https://arxiv.org/abs/2606.21633)"
         releaseDate: "2026"
 
-      - title: "MAGE: All-[MASK] Block Already Knows Where to Look in Diffusion LLM"
+      - title: "MAGE: All-[MASK] Block Already Knows Where to Look in Block Diffusion LLM"
         authors:
           - "**Omin Kwon**"
           - Yeonjae Kim
@@ -81,6 +84,7 @@ cv:
         publisher: "NeurIPS 2026; ICML 2026 AdaptFM Workshop (Best Paper Award)"
         journal: "NeurIPS 2026; ICML 2026 AdaptFM Workshop (Best Paper Award)"
         url: https://arxiv.org/abs/2602.14209
+        summary: "[Paper](https://arxiv.org/abs/2602.14209)"
         releaseDate: "2026"
 
       - title: "STAR: Improving Lifetime and Performance of High-Capacity Modern SSDs Using State-Aware Randomizer"
@@ -93,6 +97,7 @@ cv:
         publisher: "ICCAD 2025"
         journal: "ICCAD 2025"
         url: https://doi.org/10.1109/ICCAD66269.2025.11240772
+        summary: '[Paper](https://doi.org/10.1109/ICCAD66269.2025.11240772) · \* Equal contribution. U.S. patent application with SK hynix: No. 19/569899, filed March 17, 2026.'
         releaseDate: "2025"
 
       - title: "NestedFP: High-Performance, Memory-Efficient Dual-Precision Floating Point Support for LLMs"
@@ -104,6 +109,7 @@ cv:
         publisher: "NeurIPS 2025"
         journal: "NeurIPS 2025"
         url: https://neurips.cc/virtual/2025/loc/san-diego/poster/117613
+        summary: "[Paper](https://neurips.cc/virtual/2025/loc/san-diego/poster/117613)"
         releaseDate: "2025"
 
       - title: "AiDE: Attention-FFN Disaggregated Execution for Cost-Effective LLM Decoding on CXL-PNM"
@@ -112,9 +118,10 @@ cv:
           - "**Omin Kwon**"
           - Yeonhong Park
           - Jae W. Lee
-        publisher: "IEEE Computer Architecture Letters (CAL)"
-        journal: "IEEE Computer Architecture Letters (CAL)"
+        publisher: "IEEE CAL"
+        journal: "IEEE CAL"
         url: https://doi.org/10.1109/LCA.2025.3597323
+        summary: "[Paper](https://doi.org/10.1109/LCA.2025.3597323)"
         releaseDate: "2025"
 
     Experiences:
@@ -157,7 +164,7 @@ cv:
         end_date: 2023-02
 
     Presentations:
-      - name: "MAGE: All-[MASK] Block Already Knows Where to Look in Diffusion LLM"
+      - name: "MAGE: All-[MASK] Block Already Knows Where to Look in Block Diffusion LLM"
         date: 2026
         summary: "Oral presentation at the ICML 2026 AdaptFM Workshop. [arXiv](https://arxiv.org/abs/2602.14209)."
 
