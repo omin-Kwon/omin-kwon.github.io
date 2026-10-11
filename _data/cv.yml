@@ -9,7 +9,7 @@ cv:
 
   sections:
     Research Interest:
-      - "Computer Architectures & Machine Learning Systems, with an emphasis on co-designing ML algorithms and computer systems for efficient ML."
+      - "Building efficient and scalable ML systems through algorithm-system co-design."
 
     Education:
       - institution: Seoul National University
@@ -36,7 +36,8 @@ cv:
         end_date: 2025-08
         highlights:
           - "GPA: 4.26/4.3 (upper-division), 3.95/4.3 (overall)"
-          - "Leave of absence for mandatory military service (May 2021-Feb 2023)"
+          - "Ranked 1st in Introduction to ML, Computer Organization & Design, and Computer Networks."
+          - "Leave of absence for service in the Republic of Korea Air Force (May 2021-Feb 2023)"
 
       - institution: Hansung Science High School
         location: Seoul, South Korea
@@ -81,8 +82,8 @@ cv:
           - Minseo Kim
           - Yeonhong Park
           - Jae W. Lee
-        publisher: "NeurIPS 2026; ICML 2026 AdaptFM Workshop (Best Paper Award)"
-        journal: "NeurIPS 2026; ICML 2026 AdaptFM Workshop (Best Paper Award)"
+        publisher: "NeurIPS 2026; ICML 2026 AdaptFM Workshop (Oral, Best Paper Award)"
+        journal: "NeurIPS 2026; ICML 2026 AdaptFM Workshop (Oral, Best Paper Award)"
         url: https://arxiv.org/abs/2602.14209
         summary: "[Paper](https://arxiv.org/abs/2602.14209)"
         releaseDate: "2026"
@@ -94,8 +95,8 @@ cv:
           - Jaeyong Lee
           - Myungsuk Kim
           - Jihong Kim
-        publisher: "ICCAD 2025"
-        journal: "ICCAD 2025"
+        publisher: "ICCAD 2025 (Oral)"
+        journal: "ICCAD 2025 (Oral)"
         url: https://doi.org/10.1109/ICCAD66269.2025.11240772
         summary: '[Paper](https://doi.org/10.1109/ICCAD66269.2025.11240772) · \* Equal contribution. U.S. patent application with SK hynix: No. 19/569899, filed March 17, 2026.'
         releaseDate: "2025"
@@ -124,80 +125,86 @@ cv:
         summary: "[Paper](https://doi.org/10.1109/LCA.2025.3597323)"
         releaseDate: "2025"
 
-    Experiences:
+    Research Experience:
+      - company: Seoul National University
+        position: Graduate Student Researcher
+        location: Seoul, South Korea
+        start_date: 2025-09
+        end_date: present
+        highlights:
+          - "Research visit to FAST Lab, UIUC (Mar-May 2026)."
+          - >-
+            **MAGE (Project Lead)** · Advisor: Prof. Jae W. Lee
+            - Designed a training-free **sparse attention algorithm** for block diffusion LLMs.
+            - Developed an **inference system** integrated into SGLang with optimized CUDA kernels.
+            - Achieved up to 6.82× end-to-end speedup at 128K context with near-lossless accuracy.
+          - >-
+            **HERALD (Project Lead)** · Advisor: Prof. Jae W. Lee
+            - Designed a training-free **sparse attention algorithm** for block diffusion LLMs with KV offload.
+            - Developed an **inference system** integrated into SGLang with a dual-stream CPU-GPU pipeline.
+            - Achieved up to 2.28× decode throughput over GPU-only serving with near-lossless accuracy.
+          - >-
+            **SketchSSM (Project Lead)** · Advisors: Prof. Jae W. Lee and Prof. Sehoon Kim
+            - Designed a training-free **linear attention algorithm** that reduces state-read I/O.
+            - Developed an **inference system** integrated into vLLM with optimized CUDA kernels.
+            - Achieved up to 2.77× decode throughput over Standard vLLM with near-lossless accuracy.
+
+      - company: Seoul National University
+        position: Undergraduate Student Researcher
+        location: Seoul, South Korea
+        start_date: 2024-09
+        end_date: 2025-08
+        highlights:
+          - >-
+            **NestedFP** · Advisor: Prof. Jae W. Lee
+            - Integrated the NestedFP CUDA kernel into vLLM with a workload-aware precision-switching scheduler.
+          - >-
+            **AiDE** · Advisor: Prof. Jae W. Lee
+            - Proposed workload-aware KV cache placement for CXL-PNM and developed an LLM simulator.
+          - >-
+            **STAR (Project Lead)** · Advisor: Prof. Jihong Kim
+            - Proposed a 3D NAND randomization algorithm that extends SSD lifetime by up to 2.3×.
+            - Designed STAR hardware and integrated it into the SSD controller.
+            - Key contributor to a U.S. patent application with SK hynix on STAR.
+
+    Teaching Experience:
       - company: Seoul National University
         position: "Teaching Assistant, Advanced Computer Architecture (4190.571)"
         location: Seoul, South Korea
         start_date: 2026-09
         end_date: present
 
-      - company: University of Illinois Urbana-Champaign (UIUC)
-        position: Visiting Researcher
-        location: Urbana, IL, USA
-        start_date: 2026-03
-        end_date: 2026-05
-        highlights:
-          - "FAST Lab, hosted by Prof. Nam Sung Kim"
-
       - company: Seoul National University
-        position: "Microelectronics (430.207B) Tutor"
-        location: Seoul, South Korea
-        start_date: 2025-03
-        end_date: 2025-06
-
-      - company: Seoul National University
-        position: "Digital System Design (430.315) Tutor"
-        location: Seoul, South Korea
-        start_date: 2024-09
-        end_date: 2024-12
-
-      - company: Seoul National University
-        position: "Computer Organization and Design (430.322) Tutor"
+        position: Undergraduate Course Tutor
         location: Seoul, South Korea
         start_date: 2024-03
-        end_date: 2024-06
-
-      - company: Republic of Korea Air Force
-        position: Military Service
-        location: South Korea
-        start_date: 2021-05
-        end_date: 2023-02
-
-    Presentations:
-      - name: "MAGE: All-[MASK] Block Already Knows Where to Look in Block Diffusion LLM"
-        date: 2026
-        summary: "Oral presentation at the ICML 2026 AdaptFM Workshop. [arXiv](https://arxiv.org/abs/2602.14209)."
-
-      - name: "STAR: Improving Lifetime and Performance of High-Capacity Modern SSDs Using State-Aware Randomizer"
-        date: 2025
-        summary: "Oral presentation at ICCAD 2025, Munich. [Paper](https://doi.org/10.1109/ICCAD66269.2025.11240772)."
+        end_date: 2025-06
+        highlights:
+          - "Selected as an official departmental tutor based on academic excellence."
+          - "Courses: Computer Organization and Design, Digital System Design, and Microelectronics."
 
     "Honors & Awards":
       - name: "Best Paper Award @ ICML26 AdaptFM Workshop"
         title: "Best Paper Award @ ICML26 AdaptFM Workshop"
-        awarder: "ICML 2026 AdaptFM Workshop"
         date: 2026-07
-        summary: "1 Best Paper among 123 accepted papers from 218 submissions."
+        summary: "ICML 2026 AdaptFM Workshop, Best Paper among 123 accepted papers from 218 submissions (0.46%)."
 
       - name: "Grand Prize (Minister of Science and ICT Award), 2024 AI Semiconductor Idea and Design Contest"
         title: "Grand Prize (Minister of Science and ICT Award), 2024 AI Semiconductor Idea and Design Contest"
-        awarder: "Ministry of Science and ICT"
         date: 2025-01
         url: https://m.edaily.co.kr/News/Read?newsId=03581766642040672&mediaCodeNo=257
-        summary: "Designed a resolution-aware diffusion accelerator leveraging computational staleness. News: [Edaily](https://m.edaily.co.kr/News/Read?newsId=03581766642040672&mediaCodeNo=257)."
+        summary: "Ministry of Science and ICT, designed a resolution-aware diffusion accelerator. News: [Edaily](https://m.edaily.co.kr/News/Read?newsId=03581766642040672&mediaCodeNo=257)."
 
       - name: "Grand Prize (Deputy Prime Minister and Minister of Education Award), 2024 STOB League Semiconductor Contest"
         title: "Grand Prize (Deputy Prime Minister and Minister of Education Award), 2024 STOB League Semiconductor Contest"
-        awarder: "Ministry of Education"
         date: 2024-12
         url: https://www.donga.com/news/amp/all/20250123/130916601/2
-        summary: "Designed a state-aware data randomizer for high-performance SSDs, improving performance and device lifetime. News: [Dong-A Ilbo](https://www.donga.com/news/amp/all/20250123/130916601/2)."
+        summary: "Ministry of Education, designed a state-aware data randomizer for high-performance SSDs. News: [Dong-A Ilbo](https://www.donga.com/news/amp/all/20250123/130916601/2)."
 
       - name: "Grand Prize, 2024 FriendliAI LLM Hackathon"
         title: "Grand Prize, 2024 FriendliAI LLM Hackathon"
-        awarder: "FriendliAI"
         date: 2024-07
-        summary: "Developed a knowledge-graph RAG application using the FriendliAI API."
+        summary: "FriendliAI, developed a knowledge-graph RAG application using the FriendliAI API."
 
       - name: "SNU Specialized Semiconductor College Scholarship"
         title: "SNU Specialized Semiconductor College Scholarship"
