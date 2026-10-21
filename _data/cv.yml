@@ -54,8 +54,8 @@ cv:
           - Kurt Keutzer
           - "Sehoon Kim†"
           - "Jae W. Lee†"
-        publisher: "NeurIPS 2026 LCFM Workshop; extended version under review"
-        journal: "NeurIPS 2026 LCFM Workshop; extended version under review"
+        publisher: "NeurIPS 2026 LCFM Workshop; Under review at ICLR 2027 (extended version)"
+        journal: "NeurIPS 2026 LCFM Workshop; Under review at ICLR 2027 (extended version)"
         url: https://omin-kwon.github.io/project/SketchSSM/
         summary: "[Project Page](https://omin-kwon.github.io/project/SketchSSM/) · † Co-corresponding authors."
         releaseDate: "2026"
@@ -68,8 +68,8 @@ cv:
           - Seung Yul Lee
           - Ion Stoica
           - Jae W. Lee
-        publisher: "Under review"
-        journal: "Under review"
+        publisher: "Under review at MLSys 2027"
+        journal: "Under review at MLSys 2027"
         url: https://arxiv.org/abs/2606.21633
         summary: "[Paper](https://arxiv.org/abs/2606.21633)"
         releaseDate: "2026"
