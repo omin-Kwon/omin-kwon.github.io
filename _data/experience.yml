@@ -1,0 +1,17 @@
+# Concise homepage entries, separate from the detailed research CV.
+- position: Teaching Assistant
+  company: Seoul National University
+  start_date: 2026-09
+  end_date: present
+  summary: Advanced Computer Architecture (4190.571)
+
+- position: Undergraduate Peer Tutor
+  company: Seoul National University
+  start_date: 2024-03
+  end_date: 2025-06
+  summary: Computer Organization and Design, Digital System Design, and Microelectronics.
+
+- position: Military Service
+  company: Republic of Korea Air Force
+  start_date: 2021-05
+  end_date: 2023-02

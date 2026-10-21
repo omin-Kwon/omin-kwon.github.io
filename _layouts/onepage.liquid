@@ -155,11 +155,14 @@ layout: default
       <div class="timeline-columns">
         <div>
           <h3 class="subsection-title">Experience</h3>
-          {% for item in site.data.cv.cv.sections.Experiences %}
+          {% for item in site.data.experience %}
             <article class="timeline-item">
               <p class="timeline-date">{{ item.start_date }} — {{ item.end_date }}</p>
               <h4>{{ item.position }}</h4>
-              <p class="timeline-meta">{{ item.company }} · {{ item.location }}</p>
+              <p class="timeline-meta">{{ item.company }}</p>
+              {% if item.summary %}
+                <p class="timeline-note">{{ item.summary }}</p>
+              {% endif %}
             </article>
           {% endfor %}
         </div>
