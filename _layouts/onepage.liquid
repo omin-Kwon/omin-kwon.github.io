@@ -173,13 +173,17 @@ layout: default
               <p class="timeline-date">{{ item.start_date }} — {{ item.end_date }}</p>
               <h4>
                 {% if item.institution == 'Hansung Science High School' %}
-                  High School Diploma{% if item.area %} in {{ item.area }}{% endif %}
+                  {{ item.institution }}
                 {% else %}
                   {{- item.degree -}}
                   {% if item.area %} in {{ item.area }}{% endif %}
                 {% endif %}
               </h4>
-              <p class="timeline-meta">{{ item.institution }} · {{ item.location }}</p>
+              {% if item.institution == 'Hansung Science High School' %}
+                <p class="timeline-meta">{{ item.area }}</p>
+              {% else %}
+                <p class="timeline-meta">{{ item.institution }} · {{ item.location }}</p>
+              {% endif %}
               {% if item.note %}
                 <p class="timeline-note">{{ item.note }}</p>
               {% endif %}
