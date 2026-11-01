@@ -60,12 +60,13 @@ cv:
         summary: "[Project Page](https://omin-kwon.github.io/project/SketchSSM/) · † Co-corresponding authors."
         releaseDate: "2026"
 
-      - title: "HERALD: High Throughput Block Diffusion LLM Serving via CPU-GPU Cooperative KV Cache Retrieval"
+      - title: "HERALD: High Throughput Block Diffusion LLM Inference via CPU-GPU Cooperative KV Cache Retrieval"
         authors:
           - "**Omin Kwon**"
           - Doyeon Kim
           - Jongseok Park
           - Seung Yul Lee
+          - Sehoon Kim
           - Ion Stoica
           - Jae W. Lee
         publisher: "Under Review"
