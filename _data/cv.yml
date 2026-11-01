@@ -75,6 +75,18 @@ cv:
         summary: "[Paper](https://arxiv.org/abs/2606.21633)"
         releaseDate: "2026"
 
+      - title: "Triage: Skip, Skim, or Refine Attention Tiles in Video Diffusion Transformers"
+        authors:
+          - Yeonjae Kim
+          - "**Omin Kwon**"
+          - Seong Hoon Seo
+          - Jae W. Lee
+        publisher: "Under Review"
+        journal: "Under Review"
+        url: https://arxiv.org/abs/2610.35706
+        summary: "[Paper](https://arxiv.org/abs/2610.35706)"
+        releaseDate: "2026"
+
       - title: "MAGE: All-[MASK] Block Already Knows Where to Look in Block Diffusion LLM"
         authors:
           - "**Omin Kwon**"
