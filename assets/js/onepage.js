@@ -165,15 +165,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const publicationCategories = {
     kwon2026herald: "ml-systems",
     kim2026triage: "ml-systems",
-    kwon2026mage: "ml-algorithms",
+    kwon2026mage: "ml-systems",
     kwon2026sketchssm: "ml-systems",
-    lee2025nestedfp: "ml-algorithms",
+    lee2025nestedfp: "ml-systems",
     kim2025aide: "computer-architecture",
     kwon2025star: "computer-architecture",
   };
   const publicationCategoryLabels = {
     "ml-systems": "ML Systems",
-    "ml-algorithms": "ML Algorithms",
     "computer-architecture": "Computer Arch.",
   };
   const filterButtons = [...document.querySelectorAll("[data-publication-filter]")];
