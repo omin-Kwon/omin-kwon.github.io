@@ -82,8 +82,8 @@ cv:
           - Minseo Kim
           - Yeonhong Park
           - Jae W. Lee
-        publisher: "NeurIPS 2026; ICML 2026 AdaptFM Workshop (Oral, Best Paper Award)"
-        journal: "NeurIPS 2026; ICML 2026 AdaptFM Workshop (Oral, Best Paper Award)"
+        publisher: "NeurIPS 2026; ICML 2026 AdaptFM Workshop (**Oral**, Best Paper Award)"
+        journal: "NeurIPS 2026; ICML 2026 AdaptFM Workshop (**Oral**, Best Paper Award)"
         url: https://arxiv.org/abs/2602.14209
         summary: "[Paper](https://arxiv.org/abs/2602.14209)"
         releaseDate: "2026"
@@ -95,8 +95,8 @@ cv:
           - Jaeyong Lee
           - Myungsuk Kim
           - Jihong Kim
-        publisher: "ICCAD 2025 (Oral)"
-        journal: "ICCAD 2025 (Oral)"
+        publisher: "ICCAD 2025 (**Oral**)"
+        journal: "ICCAD 2025 (**Oral**)"
         url: https://doi.org/10.1109/ICCAD66269.2025.11240772
         summary: '[Paper](https://doi.org/10.1109/ICCAD66269.2025.11240772) · \* Equal contribution. U.S. patent application with SK hynix: No. 19/569899, filed March 17, 2026.'
         releaseDate: "2025"
