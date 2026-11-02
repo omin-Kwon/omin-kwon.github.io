@@ -195,6 +195,9 @@
         {% if entry.abbr -%}
           <span class="publication-venue-tag">{{ entry.abbr }}</span>
         {%- endif %}
+        {% if entry.review_status %}
+          <span class="publication-venue-tag">{{ entry.review_status }}</span>
+        {% endif %}
       </div>
     {% endif %}
 
