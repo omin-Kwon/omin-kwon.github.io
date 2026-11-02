@@ -624,15 +624,18 @@ html {
 }
 
 .onepage-news {
+  max-height: none;
+  overflow: visible;
+
   .news-list {
     margin: 0;
     padding-left: 1.25rem;
     color: var(--text);
-    font-size: 16px;
-    line-height: 1.65;
+    font-size: 14px;
+    line-height: 1.55;
 
     li {
-      margin-bottom: 8px;
+      margin-bottom: 5px;
       padding-left: 3px;
     }
   }
@@ -808,21 +811,8 @@ html[data-theme="dark"] {
   .section-link,
   .onepage-publications .publications .author,
   .onepage-publications .publications .periodical,
-  .timeline-item .timeline-meta,
-  .onepage-news .table th {
+  .timeline-item .timeline-meta {
     color: #b7c3cf !important;
-  }
-
-  .onepage-news {
-    scrollbar-color: rgba(185, 221, 255, 0.38) transparent;
-
-    &::-webkit-scrollbar-thumb {
-      background: rgba(185, 221, 255, 0.3);
-    }
-
-    &::-webkit-scrollbar-thumb:hover {
-      background: rgba(185, 221, 255, 0.5);
-    }
   }
 
   .onepage-publications .publication-area-tag,
@@ -957,21 +947,6 @@ html[data-theme="dark"] {
 
   .timeline-columns {
     gap: 50px;
-  }
-
-  .onepage-news .table th,
-  .onepage-news .table td {
-    display: block;
-    width: 100% !important;
-    padding-right: 0;
-  }
-
-  .onepage-news .table th {
-    padding-bottom: 0;
-  }
-
-  .onepage-news .table td {
-    padding-top: 2px;
   }
 }
 
