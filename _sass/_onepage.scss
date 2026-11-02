@@ -624,35 +624,23 @@ html {
 }
 
 .onepage-news {
-  max-height: 520px;
-  padding-right: 12px;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  scrollbar-color: rgba(16, 47, 79, 0.38) transparent;
-  scrollbar-width: thin;
+  .news-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.65;
 
-  &:focus-visible {
-    outline: 2px solid rgba(16, 47, 79, 0.3);
-    outline-offset: 6px;
+    li {
+      margin-bottom: 8px;
+      padding-left: 3px;
+    }
   }
 
-  &::-webkit-scrollbar {
-    width: 7px;
+  .news-date {
+    color: var(--navy);
+    white-space: nowrap;
   }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    border-radius: 999px;
-    background: rgba(16, 47, 79, 0.32);
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background: rgba(16, 47, 79, 0.5);
-  }
-
   .news-grand-prize {
     color: #a87400;
   }
@@ -671,42 +659,6 @@ html {
       height: 34px;
       transform: translateY(-7px);
     }
-  }
-
-  .table-responsive {
-    max-height: none !important;
-    overflow: visible;
-  }
-
-  .table {
-    margin: 0;
-    border-top: 1px solid var(--line);
-  }
-
-  .table tr {
-    border-bottom: 1px solid var(--line);
-  }
-
-  .table th,
-  .table td {
-    padding-top: 18px;
-    padding-bottom: 18px;
-    vertical-align: top;
-  }
-
-  .table th {
-    width: 150px !important;
-    color: #555;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 28px;
-    white-space: nowrap;
-  }
-
-  .table td {
-    color: var(--text);
-    font-size: 18px;
-    line-height: 31px;
   }
 
   a {
