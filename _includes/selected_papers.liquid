@@ -1,3 +1,18 @@
 <div class="publications">
-  {% bibliography --group_by none --query @*[selected=true]* %}
+  {% if page.layout == 'onepage' %}
+    <section class="publication-group" data-publication-group aria-labelledby="publications-preprints">
+      <h3 id="publications-preprints">Preprints</h3>
+      {% bibliography --group_by none --query @misc[selected=true]* %}
+    </section>
+    <section class="publication-group" data-publication-group aria-labelledby="publications-2026">
+      <h3 id="publications-2026">2026</h3>
+      {% bibliography --group_by none --query @inproceedings[year=2026]* %}
+    </section>
+    <section class="publication-group" data-publication-group aria-labelledby="publications-2025">
+      <h3 id="publications-2025">2025</h3>
+      {% bibliography --group_by none --query @*[year=2025]* %}
+    </section>
+  {% else %}
+    {% bibliography --group_by none --query @*[selected=true]* %}
+  {% endif %}
 </div>

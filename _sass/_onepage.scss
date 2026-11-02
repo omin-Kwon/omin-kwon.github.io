@@ -510,6 +510,17 @@ html {
 }
 
 .onepage-publications {
+  .publication-group {
+    margin-top: 28px;
+
+    h3 {
+      margin: 0 0 8px;
+      color: #111;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+
   .publications h2 {
     display: none;
   }
@@ -569,6 +580,16 @@ html {
     color: #4b5563;
     font-size: 16px;
     line-height: 27px;
+  }
+
+  .publications .author em,
+  .publications .periodical {
+    color: #111;
+  }
+
+  .publications .publication-distinction {
+    color: #c62828;
+    font-weight: 700;
   }
 }
 
@@ -818,6 +839,15 @@ html[data-theme="dark"] {
   .onepage-publications .publication-area-tag,
   .onepage-publications .publication-venue-tag {
     background: rgba(155, 207, 255, 0.1);
+  }
+
+  .onepage-publications .publication-group h3,
+  .onepage-publications .publications .author em {
+    color: #edf2f7;
+  }
+
+  .onepage-publications .publications .publication-distinction {
+    color: #ff9292;
   }
 
   .publication-filter {

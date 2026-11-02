@@ -160,6 +160,8 @@
       {% capture entrytype %}<em>{{ entry.booktitle }}</em>{% endcapture %}
     {% elsif thesis contains entry.type %}
       {% capture entrytype %}<em>{{ entry.school }}</em>{% endcapture %}
+    {% elsif entry.abbr == 'Under Review' %}
+      {% capture entrytype %}Under Review{% endcapture %}
     {% else %}
       {% capture entrytype %}{% endcapture %}
     {% endif %}
@@ -191,14 +193,7 @@
     </div>
 
     {% if page.layout == 'onepage' %}
-      <div class="publication-tags" aria-label="Publication categories and venue">
-        {% if entry.abbr -%}
-          <span class="publication-venue-tag">{{ entry.abbr }}</span>
-        {%- endif %}
-        {% if entry.review_status %}
-          <span class="publication-venue-tag">{{ entry.review_status }}</span>
-        {% endif %}
-      </div>
+      <div class="publication-tags" aria-label="Research area"></div>
     {% endif %}
 
     <!-- Links/Buttons -->

@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   const publicationCategoryLabels = {
     "ml-systems": "ML Systems",
-    "computer-architecture": "Computer Arch.",
+    "computer-architecture": "Computer Architecture",
   };
   const filterButtons = [...document.querySelectorAll("[data-publication-filter]")];
   const publicationItems = Object.entries(publicationCategories)
@@ -206,6 +206,9 @@ document.addEventListener("DOMContentLoaded", () => {
     publicationItems.forEach((item) => {
       const isVisible = !selectedCategory || item.dataset.publicationCategory === selectedCategory;
       item.hidden = !isVisible;
+    });
+    document.querySelectorAll("[data-publication-group]").forEach((group) => {
+      group.hidden = ![...group.querySelectorAll("ol.bibliography > li")].some((item) => !item.hidden);
     });
   };
 
