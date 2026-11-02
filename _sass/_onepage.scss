@@ -428,22 +428,22 @@ html {
 .publication-filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin: -8px 0 30px;
+  gap: 8px;
+  margin: -8px 0 22px;
 }
 
 .publication-filter {
   --publication-category-color: var(--navy);
 
-  padding: 7px 14px;
+  padding: 3px 10px;
   border: 1px solid var(--publication-category-color);
   border-radius: 999px;
   color: #fff;
   background: var(--publication-category-color);
   font-family: inherit;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 18px;
   cursor: pointer;
   transition:
     color 160ms ease,
@@ -462,8 +462,8 @@ html {
 
   &.is-active {
     box-shadow:
-      0 0 0 3px #fff,
-      0 0 0 5px var(--publication-category-color);
+      0 0 0 1px #fff,
+      0 0 0 3px var(--publication-category-color);
   }
 }
 
@@ -527,12 +527,12 @@ html {
 
   .publications ol.bibliography {
     margin: 0;
-    border-top: 1px solid var(--line);
+    border: 0;
   }
 
   .publications ol.bibliography li {
     padding: 22px 0;
-    border-bottom: 1px solid var(--line);
+    border: 0;
   }
 
   .publications .row {
@@ -573,6 +573,20 @@ html {
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
+
+    a {
+      color: #1670c5;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 3px;
+      }
+    }
   }
 
   .publications .author,
@@ -857,8 +871,8 @@ html[data-theme="dark"] {
 
   .publication-filter.is-active {
     box-shadow:
-      0 0 0 3px #080d14,
-      0 0 0 5px var(--publication-category-color);
+      0 0 0 1px #080d14,
+      0 0 0 3px var(--publication-category-color);
   }
 
   [data-publication-filter="ml-systems"],
