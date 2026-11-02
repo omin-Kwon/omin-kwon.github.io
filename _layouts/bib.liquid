@@ -1,7 +1,7 @@
 ---
 ---
 <div class="row">
-  {% if site.enable_publication_thumbnails %}
+  {% if site.enable_publication_thumbnails and page.layout != 'onepage' %}
     <div class="col col-sm-2 abbr">
       {%- if entry.abbr -%}
         {%- if site.data.venues[entry.abbr] -%}
@@ -46,7 +46,10 @@
   {% endif %}
 
   <!-- Entry bib key -->
-  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
+  <div
+    id="{{ entry.key }}"
+    class="{% if page.layout == 'onepage' %}col-12{% elsif site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}"
+  >
     <!-- Title -->
     <div class="title">{{ entry.title }}</div>
     <!-- Author -->
@@ -186,6 +189,14 @@
     <div class="periodical">
       {{ entry.note | strip }}
     </div>
+
+    {% if page.layout == 'onepage' %}
+      <div class="publication-tags" aria-label="Publication categories and venue">
+        {% if entry.abbr -%}
+          <span class="publication-venue-tag">{{ entry.abbr }}</span>
+        {%- endif %}
+      </div>
+    {% endif %}
 
     <!-- Links/Buttons -->
     <div class="links">

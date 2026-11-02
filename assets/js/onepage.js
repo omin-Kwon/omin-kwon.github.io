@@ -182,13 +182,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (item) {
         item.dataset.publicationCategory = category;
 
-        const thumbnail = item.querySelector(".abbr");
-        if (thumbnail) {
+        const tags = item.querySelector(".publication-tags");
+        if (tags) {
           const categoryTag = document.createElement("span");
           categoryTag.className = "publication-area-tag";
           categoryTag.dataset.publicationCategory = category;
           categoryTag.textContent = publicationCategoryLabels[category];
-          thumbnail.prepend(categoryTag);
+          tags.prepend(categoryTag);
         }
       }
       return item;
