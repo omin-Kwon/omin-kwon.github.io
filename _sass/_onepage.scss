@@ -601,6 +601,11 @@ html {
     color: #111;
   }
 
+  .publications .author > em {
+    border-bottom: 0;
+    font-weight: 700;
+  }
+
   .publications .publication-distinction {
     color: #c62828;
     font-weight: 700;
