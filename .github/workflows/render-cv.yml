@@ -5,6 +5,7 @@ on:
       - main
       - master
     paths:
+      - "requirements.txt"
       - "_data/cv.yml"
       - "assets/rendercv/design.yaml"
       - "assets/rendercv/locale.yaml"
