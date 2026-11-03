@@ -71,4 +71,4 @@ design:
       main_column: "**NAME**\nAWARDER\nSUMMARY\nHIGHLIGHTS"
       date_and_location_column: "DATE\nLOCATION"
     publication_entry:
-      main_column: "**TITLE**\nAUTHORS\nJOURNAL\nSUMMARY"
+      main_column: "**TITLE**\nAUTHORS\nJOURNAL\nSUMMARY\n#v(2pt)"
