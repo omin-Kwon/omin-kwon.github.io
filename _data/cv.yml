@@ -46,21 +46,19 @@ cv:
         end_date: 2019-03
 
     Publications:
-      - title: "[SketchSSM: Write to the Full State, Read from a Compact Sketch](https://omin-kwon.github.io/project/SketchSSM/)"
+      - title: "SketchSSM: Write to the Full State, Read from a Compact Sketch"
         authors:
           - "**Omin Kwon**"
           - JoongWon Shin
           - Minseo Kim
           - Kurt Keutzer
-          - "Sehoon Kim†"
-          - "Jae W. Lee†"
+          - "Sehoon Kim"
+          - "Jae W. Lee"
         publisher: "NeurIPS 2026 Long-Context Foundation Model Workshop (Oral); Under Review"
         journal: "NeurIPS 2026 Long-Context Foundation Model Workshop (Oral); Under Review"
-        url: https://omin-kwon.github.io/project/SketchSSM/
-        summary: "† Co-corresponding authors."
         releaseDate: "2026"
 
-      - title: "[HERALD: High Throughput Block Diffusion LLM Inference via CPU-GPU Cooperative KV Cache Retrieval](https://arxiv.org/abs/2606.21633)"
+      - title: "HERALD: High Throughput Block Diffusion LLM Inference via CPU-GPU Cooperative KV Cache Retrieval"
         authors:
           - "**Omin Kwon**"
           - Doyeon Kim
@@ -71,10 +69,9 @@ cv:
           - Jae W. Lee
         publisher: "Under Review"
         journal: "Under Review"
-        url: https://arxiv.org/abs/2606.21633
         releaseDate: "2026"
 
-      - title: "[Triage: Skip, Skim, or Refine Attention Tiles in Video Diffusion Transformers](https://arxiv.org/abs/2610.35706)"
+      - title: "Triage: Skip, Skim, or Refine Attention Tiles in Video Diffusion Transformers"
         authors:
           - Yeonjae Kim
           - "**Omin Kwon**"
@@ -82,10 +79,9 @@ cv:
           - Jae W. Lee
         publisher: "Under Review"
         journal: "Under Review"
-        url: https://arxiv.org/abs/2610.35706
         releaseDate: "2026"
 
-      - title: "[MAGE: All-[MASK] Block Already Knows Where to Look in Block Diffusion LLM](https://arxiv.org/abs/2602.14209)"
+      - title: "MAGE: All-[MASK] Block Already Knows Where to Look in Block Diffusion LLM"
         authors:
           - "**Omin Kwon**"
           - Yeonjae Kim
@@ -95,23 +91,21 @@ cv:
           - Jae W. Lee
         publisher: "NeurIPS 2026; ICML 2026 AdaptFM Workshop (Oral, #text(fill: maroon)[Best Paper Award] (1/218 = 0.46%))"
         journal: "NeurIPS 2026; ICML 2026 AdaptFM Workshop (Oral, #text(fill: maroon)[Best Paper Award] (1/218 = 0.46%))"
-        url: https://arxiv.org/abs/2602.14209
         releaseDate: "2026"
 
-      - title: "[STAR: Improving Lifetime and Performance of High-Capacity Modern SSDs Using State-Aware Randomizer](https://doi.org/10.1109/ICCAD66269.2025.11240772)"
+      - title: "STAR: Improving Lifetime and Performance of High-Capacity Modern SSDs Using State-Aware Randomizer"
         authors:
-          - '**Omin Kwon**\*'
-          - 'Kyungjun Oh\*'
+          - "**Omin Kwon**"
+          - "Kyungjun Oh"
           - Jaeyong Lee
           - Myungsuk Kim
           - Jihong Kim
         publisher: "ICCAD 2025 (Oral)"
         journal: "ICCAD 2025 (Oral)"
-        url: https://doi.org/10.1109/ICCAD66269.2025.11240772
-        summary: '\* Equal contribution. U.S. patent application with SK hynix: No. 19/569899, filed March 17, 2026.'
+        summary: "U.S. patent application with SK hynix: No. 19/569899, filed March 17, 2026."
         releaseDate: "2025"
 
-      - title: "[NestedFP: High-Performance, Memory-Efficient Dual-Precision Floating Point Support for LLMs](https://neurips.cc/virtual/2025/loc/san-diego/poster/117613)"
+      - title: "NestedFP: High-Performance, Memory-Efficient Dual-Precision Floating Point Support for LLMs"
         authors:
           - Haeun Lee
           - "**Omin Kwon**"
@@ -119,10 +113,9 @@ cv:
           - Jae W. Lee
         publisher: "NeurIPS 2025"
         journal: "NeurIPS 2025"
-        url: https://neurips.cc/virtual/2025/loc/san-diego/poster/117613
         releaseDate: "2025"
 
-      - title: "[AiDE: Attention-FFN Disaggregated Execution for Cost-Effective LLM Decoding on CXL-PNM](https://doi.org/10.1109/LCA.2025.3597323)"
+      - title: "AiDE: Attention-FFN Disaggregated Execution for Cost-Effective LLM Decoding on CXL-PNM"
         authors:
           - KyungSoo Kim
           - "**Omin Kwon**"
@@ -130,7 +123,6 @@ cv:
           - Jae W. Lee
         publisher: "IEEE CAL"
         journal: "IEEE CAL"
-        url: https://doi.org/10.1109/LCA.2025.3597323
         releaseDate: "2025"
 
     Research Experience:
