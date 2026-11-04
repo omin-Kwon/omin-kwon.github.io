@@ -18,10 +18,10 @@ announcements:
 
 research_areas:
   - number: "01"
-    title: ML Systems
+    title: Memory-Efficient Foundation Model Inference
     description: Designing ML algorithms and software systems for efficient inference, including sparse attention, KV cache offloading, matrix sketching, and optimized GPU kernels.
   - number: "02"
-    title: Computer Architecture
+    title: Memory and Storage System Architecture
     description: Designing memory and storage architectures for efficient computing, in collaboration with Samsung and SK hynix to address real-world industry challenges.
 ---
 
