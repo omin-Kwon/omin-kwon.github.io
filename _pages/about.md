@@ -6,7 +6,7 @@ one_page: true
 description: Omin Kwon is a computer architecture and machine learning systems researcher at Seoul National University.
 
 profile:
-  image: omin_profile_sketch_v5.png
+  image: omin-profile-formal.jpg
 
 selected_papers: true
 social: true

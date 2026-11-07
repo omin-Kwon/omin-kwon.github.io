@@ -1238,16 +1238,19 @@ html[data-theme="dark"] {
 }
 
 @media (min-width: 900px) {
+  $sidebar-width: 320px;
+  $sidebar-profile-height: 410px;
+
   .one-page-site {
     padding-top: 0 !important;
 
     #navbar {
       position: fixed;
-      top: 385px;
+      top: $sidebar-profile-height;
       right: auto;
       bottom: 0;
       left: 0;
-      width: 280px;
+      width: $sidebar-width;
       min-height: 0;
       align-items: flex-start;
       border-right: 1px solid #e1e7ed;
@@ -1318,7 +1321,7 @@ html[data-theme="dark"] {
 
   .onepage-home {
     min-height: 100vh;
-    margin-left: 280px;
+    margin-left: $sidebar-width;
   }
 
   .onepage-intro {
@@ -1326,8 +1329,8 @@ html[data-theme="dark"] {
     z-index: 1031;
     top: 0;
     left: 0;
-    width: 280px;
-    height: 385px;
+    width: $sidebar-width;
+    height: $sidebar-profile-height;
     padding: 30px 32px 24px;
     border-right: 1px solid #e1e7ed;
     background: linear-gradient(180deg, #eaf5fd 0%, #f6f8fa 58%, #f6f8fa 100%);
@@ -1352,8 +1355,8 @@ html[data-theme="dark"] {
   }
 
   .intro-portrait {
-    width: 132px;
-    height: 132px;
+    width: 160px;
+    height: 160px;
     margin: 0 0 16px;
 
     .intro-portrait-face {
