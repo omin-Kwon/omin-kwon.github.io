@@ -1238,8 +1238,8 @@ html[data-theme="dark"] {
 }
 
 @media (min-width: 900px) {
-  $sidebar-width: 320px;
-  $sidebar-profile-height: 410px;
+  $sidebar-width: clamp(340px, 29vw, 400px);
+  $sidebar-profile-height: 440px;
 
   .one-page-site {
     padding-top: 0 !important;
@@ -1355,8 +1355,8 @@ html[data-theme="dark"] {
   }
 
   .intro-portrait {
-    width: 160px;
-    height: 160px;
+    width: 190px;
+    height: 190px;
     margin: 0 0 16px;
 
     .intro-portrait-face {
