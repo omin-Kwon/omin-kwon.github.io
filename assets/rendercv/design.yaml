@@ -6,6 +6,7 @@ design:
     show_footer: false
     show_top_note: false
   typography:
+    line_spacing: 0.66em
     alignment: left
     font_family:
       body: New Computer Modern
@@ -44,10 +45,10 @@ design:
   section_titles:
     type: with_full_line
     line_thickness: 0.5pt
-    space_above: 0.35cm
-    space_below: 0.18cm
+    space_above: 0.38cm
+    space_below: 0.19cm
   sections:
-    space_between_regular_entries: 0.15cm
+    space_between_regular_entries: 0.2cm
     space_between_text_based_entries: 0.12cm
     show_time_spans_in: []
   entries:
@@ -57,8 +58,8 @@ design:
       bullet: "•"
       nested_bullet: "◦"
       space_left: 0.18cm
-      space_above: 0.05cm
-      space_between_items: 0.04cm
+      space_above: 0.06cm
+      space_between_items: 0.05cm
   templates:
     education_entry:
       main_column: "**INSTITUTION**\n*DEGREE* *DEGREE_CONNECTOR* *AREA*\nSUMMARY\nHIGHLIGHTS"
