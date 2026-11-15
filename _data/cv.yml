@@ -142,7 +142,7 @@ cv:
             **HERALD (Project Lead)** · Advisor: Prof. Jae W. Lee
             - Designed a training-free **sparse attention algorithm** for block diffusion LLMs with KV offload.
             - Developed an **inference system** integrated into SGLang with a dual-stream CPU-GPU pipeline.
-            - Achieved up to 2.28× decode throughput over GPU-only serving with near-lossless accuracy.
+            - Achieved up to 3.70×, 2.59×, and 8.38× decode throughput over Dense, MAGE, and MAGE-Offload, respectively, with near-lossless accuracy at K=1024 across four block dLLMs.
           - >-
             **SketchSSM (Project Lead)** · Advisors: Prof. Jae W. Lee and Prof. Sehoon Kim
             - Designed a training-free **linear attention algorithm** that reduces state-read I/O.
