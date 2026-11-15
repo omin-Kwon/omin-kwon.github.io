@@ -48,7 +48,7 @@ design:
     space_above: 0.38cm
     space_below: 0.19cm
   sections:
-    space_between_regular_entries: 0.2cm
+    space_between_regular_entries: 0.17cm
     space_between_text_based_entries: 0.12cm
     show_time_spans_in: []
   entries:
@@ -59,7 +59,7 @@ design:
       nested_bullet: "◦"
       space_left: 0.18cm
       space_above: 0.06cm
-      space_between_items: 0.05cm
+      space_between_items: 0.04cm
   templates:
     education_entry:
       main_column: "**INSTITUTION**\n*DEGREE* *DEGREE_CONNECTOR* *AREA*\nSUMMARY\nHIGHLIGHTS"
